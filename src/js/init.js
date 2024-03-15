@@ -30,7 +30,7 @@ document.getElementById('headerframe').addEventListener('load', function() {
   });
 });
 
-//footer高さ設定
+//footer高さ
 var elmfooter = document.getElementById("footerFrame");
 
 function changefooterHeight(){

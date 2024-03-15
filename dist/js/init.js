@@ -30,7 +30,7 @@ document.getElementById('headerframe').addEventListener('load', function () {
   });
 });
 
-//footer高さ設定
+//footer高さ
 var elmfooter = document.getElementById("footerFrame");
 function changefooterHeight() {
   elmfooter.style.height = elmfooter.contentWindow.document.body.scrollHeight + "px";
@@ -48,15 +48,3 @@ elmfooter.contentWindow.onresize = function () {
   }, 100);
 };
 //# sourceMappingURL=map/init.js.map
-
-
-
-$(document).ready(function() {
-  $('.tab').click(function() {
-    var tabId = $(this).data('tab');
-    $('.tab-content').removeClass('active');
-    $('#' + tabId).addClass('active');
-    $('.tab').removeClass('active');
-    $(this).addClass('active');
-  });
-});

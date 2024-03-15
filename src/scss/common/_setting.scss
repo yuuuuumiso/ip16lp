@@ -1,0 +1,91 @@
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+html {
+line-height: 1.6;
+color: $color-font;
+font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+"Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+Verdana, Meiryo, sans-serif;/*-apple-system：iOS, macOSのシステムフォントが使える*/
+font-feature-settings:"palt"; /*文字詰め*/
+letter-spacing: 0.1em;
+font-size: 62.5%;/*デフォルト10px*/
+-webkit-tap-highlight-color: transparent; /* リンクがタップされている間の強調をなくす */
+-webkit-text-size-adjust: none;/*スマホを横向き対策*/
+-webkit-font-smoothing: antialiased;/*macでfontを滑らかに*/
+line-break: strict;
+overflow-wrap: break-word;
+word-break: break-all;
+min-width: 320px;
+tab-size: 4;
+scroll-behavior: smooth;
+overflow-x: hidden;
+@include mq(tab) {
+  font-size:50%;
+}
+}
+@media (max-width: 768px) {
+  .is-pc {
+    display: none;
+  }
+  .is-sp {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .is-sp {
+    display: none !important;
+  }
+  .is-pc {
+    display: block !important;
+  }
+}
+
+:target {
+scroll-margin-top: 3rem;
+}
+::selection {
+background: #acacac;
+}
+img {
+max-width: 100%;
+height: auto;
+image-rendering: crisp-edges;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+//rem+px
+// .sampleee {
+//   @include m.font-rem(14);
+// }
+//rem
+// .sampleee {
+//   font-size: m.rem(16);
+// }
+//fontsizeを動的に
+// html {
+//   font-size: m.rootFz();
+// }
+// @media screen and (max-width: 800px) {
+//   html {
+//     font-size: m.rootFz(768px);
+//   }
+// }
+// .sampleee {
+//   font-size: m.calcFz(16);
+// }
+// @media screen and (max-width: 800px) {
+//   .sampleee {
+//     font-size: m.calcFz(14);
+//   }
+// }

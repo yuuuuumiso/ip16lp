@@ -1,0 +1,11 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+
+
+@media (max-width: 960px) {
+.l-header{
+    height: 30px;
+    }
+}
+
+

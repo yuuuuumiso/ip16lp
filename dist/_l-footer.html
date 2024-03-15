@@ -1,50 +1,11 @@
-<div class="p-pick">
-  <div class="c-container">
-    <div class="c-ttlWrap">
-      <h2 class="c-ttl">PICK UP</h2>
-    </div>
-    <ul class="p-pick__bnrs">
-      <li class="p-pick__bnr"><a href="https://www.rakuten.ne.jp/gold/pga-shop/season/earphone_rakuten/"><img src="./img/bnr_01.webp"></a></li>
-      <li class="p-pick__bnr"><a href="https://www.rakuten.ne.jp/gold/pga-shop/season/airpods_rakuten/"><img src="./img/bnr_02.png"></a></li>
-      <li class="p-pick__bnr"><a href="https://www.rakuten.ne.jp/gold/pga-shop/season/back-clear-case/"><img src="./img/bnr_03.webp"></a></li>
-      <li class="p-pick__bnr"><a href="https://www.rakuten.ne.jp/gold/pga-shop/season/airtag_rakuten/"><img src="./img/bnr_04.png"></a></li>
-    </ul>
-    <figure class="p-pick__logo"><a href="https://www.rakuten.ne.jp/gold/pga-shop/"><img src="./img/logo.png" alt=""></a></figure>
-  </div>
-</div>
 
 <footer class="l-footer">
     <div class="l-footer__inner">
         <iframe src="https://www.rakuten.ne.jp/gold/pga-shop/footercontent.html" scrolling="no" frameborder="0" id="footerFrame"></iframe><div id="pagetop"><a href="#top"><i class="fas fa-angle-up"></i></a></div>
     </div>
 </footer>
+
 <script>
-
-
-//商品数調整
-let resizeTimeout;
-
-function checkWindowSize() {
-  var lists = document.querySelectorAll('.itemgroup__lists');
-  lists.forEach(function(list) {
-    var items = list.querySelectorAll('.itemgroup__list');
-    if (window.innerWidth <= 1024) {
-      if (items[6]) items[6].style.display = 'none';
-      if (items[7]) items[7].style.display = 'none';
-    } else {
-      if (items[6]) items[6].style.display = '';
-      if (items[7]) items[7].style.display = '';
-    }
-  });
-}
-
-function debouncedResize() {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(checkWindowSize, 100);
-}
-
-window.addEventListener('resize', debouncedResize);
-window.addEventListener('DOMContentLoaded', checkWindowSize);
 
 //cssキャッシュ
 const cssFiles = [

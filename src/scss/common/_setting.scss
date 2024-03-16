@@ -63,29 +63,3 @@ a:visited,
 a:active {
   text-decoration: none;
 }
-
-//rem+px
-// .sampleee {
-//   @include m.font-rem(14);
-// }
-//rem
-// .sampleee {
-//   font-size: m.rem(16);
-// }
-//fontsizeを動的に
-// html {
-//   font-size: m.rootFz();
-// }
-// @media screen and (max-width: 800px) {
-//   html {
-//     font-size: m.rootFz(768px);
-//   }
-// }
-// .sampleee {
-//   font-size: m.calcFz(16);
-// }
-// @media screen and (max-width: 800px) {
-//   .sampleee {
-//     font-size: m.calcFz(14);
-//   }
-// }

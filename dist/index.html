@@ -50,12 +50,122 @@
     </div>
 </section>
 
+<!-- モーダル -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent">
+            <p class="name">Name: </p>
+            <p class="age">Age: </p>
+            <p class="city">City: </p>
+            <p class="color1 hide">Color1: <a class="color1Link" target="_blank"></a></p>
+            <p class="color2 hide">Color2: <a class="color2Link" target="_blank"></a></p>
+            <p class="color3 hide">Color3: <a class="color3Link" target="_blank"></a></p>
+            <p class="color4 hide">Color4: <a class="color4Link" target="_blank"></a></p>
+        </div>
+    </div>
+</div>
 
+<!-- ボタン1 -->
+<a class="modalBtn" data-index="0">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Image">
+        <div>モーダル1を開く</div>
+    </div>
+</a>
+<!-- ボタン2 -->
+<a class="modalBtn" data-index="1">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Image">
+        <div>モーダル2を開く</div>
+    </div>
+</a>
+<!-- ボタン3 -->
+<a class="modalBtn" data-index="2">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Image">
+        <div>モーダル3を開く</div>
+    </div>
+</a>
+<!-- ボタン4 -->
+<a class="modalBtn" data-index="3">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Image">
+        <div>モーダル4を開く</div>
+    </div>
+</a>
+<!-- ボタン5 -->
+<a class="modalBtn" data-index="4">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Image">
+        <div>モーダル5を開く</div>
+    </div>
+</a>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    // モーダルの表示
+    $(".modalBtn").click(function(){
+        var index = $(this).data("index");
+        $("#modal").css("display", "block");
+        // body要素にoverflow:hiddenを設定してスクロールを禁止
+        $("body").css("overflow", "hidden");
+        
+        // モーダルが開かれるたびに全ての色情報を非表示にする
+        $(".color1, .color2, .color3, .color4").addClass("hide");
+        
+        // JSONからデータを読み込む
+        $.getJSON("./data/data.json", function(data) {
+            displayModalContent(data[index]);
+        });
+    });
+
+    // モーダルの背景をクリックしてモーダルを閉じる
+    $("#modal").click(function(event){
+        if(event.target.id === "modal"){
+            $("#modal").css("display", "none");
+            // body要素のoverflow:hiddenを解除してスクロールを許可
+            $("body").css("overflow", "auto");
+        }
+    });
+
+    // 閉じるボタンがクリックされたときの処理
+    $(".close").click(function(){
+        $("#modal").css("display", "none");
+        // body要素のoverflow:hiddenを解除してスクロールを許可
+        $("body").css("overflow", "auto");
+    });
+
+    // モーダルの内容を表示
+    function displayModalContent(data) {
+        $(".name").text("Name: " + data.name);
+        $(".age").text("Age: " + data.age);
+        $(".city").text("City: " + data.city);
+        // JSONデータが存在する場合のみ該当する要素を表示
+        if(data.color1) {
+            $(".color1").removeClass("hide");
+            $(".color1Link").text(data.color1.name).attr("href", data.color1.link);
+        }
+        if(data.color2) {
+            $(".color2").removeClass("hide");
+            $(".color2Link").text(data.color2.name).attr("href", data.color2.link);
+        }
+        if(data.color3) {
+            $(".color3").removeClass("hide");
+            $(".color3Link").text(data.color3.name).attr("href", data.color3.link);
+        }
+        if(data.color4) {
+            $(".color4").removeClass("hide");
+            $(".color4Link").text(data.color4.name).attr("href", data.color4.link);
+        }
+    }
+});
+</script>
 </main>
 
-<footer class="l-footer">
+<footer class="l-footer">¥
     <div class="l-footer__inner">
-        <iframe src="https://www.rakuten.ne.jp/gold/pga-shop/footercontent.html" scrolling="no" frameborder="0" id="footerFrame"></iframe><div id="pagetop"><a href="#top"><i class="fas fa-angle-up"></i></a></div>
+
     </div>
 </footer>
 

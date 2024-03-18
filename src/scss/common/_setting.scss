@@ -15,6 +15,7 @@ font-size: 62.5%;/*デフォルト10px*/
 -webkit-font-smoothing: antialiased;/*macでfontを滑らかに*/
 line-break: strict;
 overflow-wrap: break-word;
+text-wrap: balance;
 word-break: break-all;
 min-width: 320px;
 tab-size: 4;
@@ -51,6 +52,7 @@ img {
 max-width: 100%;
 height: auto;
 image-rendering: crisp-edges;
+// image-rendering: -webkit-optimize-contrast;
 }
 *,
 *:before,

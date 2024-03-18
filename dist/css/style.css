@@ -202,6 +202,7 @@ html {
 	-webkit-font-smoothing: antialiased; /*macでfontを滑らかに*/
 	line-break: strict;
 	overflow-wrap: break-word;
+	text-wrap: balance;
 	word-break: break-all;
 	min-width: 320px;
 	-moz-tab-size: 4;

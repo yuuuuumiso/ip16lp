@@ -1,0 +1,90 @@
+@charset "utf-8";
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.splashbg{
+	display: none;
+}
+
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+	z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left: 0;
+    transform: scaleX(0);
+    background-color: #960021;/*伸びる背景色の設定*/
+	animation-name:PageAnime;
+	animation-duration:.8s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+/* loading ※https://projects.lukehaas.me/css-loaders/参照*/
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #ffffff;
+  animation: load1 1s infinite ease-in-out;
+  width: 0.5em;
+  height: 1em;
+}
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}

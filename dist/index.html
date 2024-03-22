@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H700CY5JLK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H700CY5JLK');
-</script>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,user-scalable=yes">
 <title>Premium Style アウトレットセール「在庫限り」「通常のサポート」｜Premium Style Store</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%7COswald&display=swap" rel="stylesheet">
 <meta name="description" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」｜株式会社PGA -【楽天市場】Premium Style Store">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<meta property="og:site_name" content="株式会社PGA -【楽天市場】Premium Style Store" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」" />
+<meta property="og:site_name" content="株式会社PGA -【楽天市場】Premium Style Store"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」"/>
 <meta property="og:description" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」" />
 <meta property="og:url" content="https://www.rakuten.ne.jp/gold/pga-shop/season/outlet_rakuten/" />
 <meta property="og:image" content="https://www.rakuten.ne.jp/gold/pga-shop/season/outlet_rakuten/img/ogp.jpg" />
 <meta property="og:image:secure_url" content="https://www.rakuten.ne.jp/gold/pga-shop/season/outlet_rakuten/img/ogp.jpg" />
-<meta property="article:published_time" content="2020-10-14T23:00:42Z" />
-<meta property="article:modified_time" content="2020-10-20T09:26:32Z" />
-<meta property="article:publisher" content="https://www.facebook.com/PerfectGearAgency/" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@pga_2017" />
 <meta name="twitter:domain" content="www.pg-a.co.jp" />
 <meta name="twitter:title" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」｜株式会社PGA -【楽天市場】Premium Style Store" />
 <meta name="twitter:description" content="Premium Style アウトレットセール「良品」「在庫限り」「通常のサポート」" />
 <meta name="twitter:image" content="https://www.rakuten.ne.jp/gold/pga-shop/season/outlet_rakuten/img/ogp.jpg" />
+<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
 
-
-<header class="l-header">
+  <div id="splash">
+    <div id="splash-logo"><div class="loader"></div></div>
+     </div>
+    <div class="splashbg"></div><!---画面遷移用-->
+  
+<div id="container">
+  <header class="l-header">
   <div class="l-header__inner">
     <!-- ナビ：https://recruit.plandosee.co.jp/ -->
   </div>
@@ -118,119 +113,19 @@ css関数
         <div>モーダル5を開く</div>
     </div>
 </a>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function(){
-    // モーダルの表示
-    $(".modalBtn").click(function(){
-        var index = $(this).data("index");
-        $("#modal").css("display", "block");
-        // body要素にoverflow:hiddenを設定してスクロールを禁止
-        $("body").css("overflow", "hidden");
-        
-        // モーダルが開かれるたびに全ての色情報を非表示にする
-        $(".color1, .color2, .color3, .color4").addClass("hide");
-        
-        // JSONからデータを読み込む
-        $.getJSON("./data/data.json", function(data) {
-            displayModalContent(data[index]);
-        });
-    });
 
-    // モーダルの背景をクリックしてモーダルを閉じる
-    $("#modal").click(function(event){
-        if(event.target.id === "modal"){
-            $("#modal").css("display", "none");
-            // body要素のoverflow:hiddenを解除してスクロールを許可
-            $("body").css("overflow", "auto");
-        }
-    });
 
-    // 閉じるボタンがクリックされたときの処理
-    $(".close").click(function(){
-        $("#modal").css("display", "none");
-        // body要素のoverflow:hiddenを解除してスクロールを許可
-        $("body").css("overflow", "auto");
-    });
-
-    // モーダルの内容を表示
-    function displayModalContent(data) {
-        $(".name").text("Name: " + data.name);
-        $(".age").text("Age: " + data.age);
-        $(".city").text("City: " + data.city);
-        // JSONデータが存在する場合のみ該当する要素を表示
-        if(data.color1) {
-            $(".color1").removeClass("hide");
-            $(".color1Link").text(data.color1.name).attr("href", data.color1.link);
-        }
-        if(data.color2) {
-            $(".color2").removeClass("hide");
-            $(".color2Link").text(data.color2.name).attr("href", data.color2.link);
-        }
-        if(data.color3) {
-            $(".color3").removeClass("hide");
-            $(".color3Link").text(data.color3.name).attr("href", data.color3.link);
-        }
-        if(data.color4) {
-            $(".color4").removeClass("hide");
-            $(".color4Link").text(data.color4.name).attr("href", data.color4.link);
-        }
-    }
-});
-</script>
 </main>
 
-<footer class="l-footer">¥
+<footer class="l-footer">
     <div class="l-footer__inner">
 
     </div>
 </footer>
 
-<script>
+</div><!--/container-->
 
-//cssキャッシュ
-const cssFiles = [
-  './css/style.css',
-  './css/iframe.css',
-];
-const date_css = '?' + new Date().getTime();
-for (var i = 0; i < cssFiles.length; i++){
-  let css_el = document.createElement("link");
-  css_el.rel = "stylesheet";
-  css_el.type = "text/css";
-  css_el.href = cssFiles[i] + date_css;
-  document.head.appendChild(css_el);
-}
-
-//jsキャッシュ
-const jsFiles = [
-    './js/init.js',
-    ];
-    const date_js = '?' + new Date().getTime();
-    for (var i = 0; i < jsFiles.length; i++){
-    let js_el = document.createElement("script");
-    js_el.type = "text/javascript";
-    js_el.src = jsFiles[i] + date_js;
-    document.body.appendChild(js_el);
-    }
-
-    //imgタグキャッシュ
-window.addEventListener('DOMContentLoaded', function () {//HTML ドキュメントが完全に読み込まれ、解析されたときに発生
-  let file_tmp;
-  const date_param = new Date().getTime();//日時
-  const imgs = document.querySelectorAll("img");//ページ内のすべての img タグを取得
-  for(let i=0; i<imgs.length; i++) {//取得した画像要素に対してループ
-    if (imgs[i].getAttribute("data-src") !== null) {//data-src 属性が存在する場合のみ、後続の処理
-      if (imgs[i].getAttribute("data-src").indexOf('?') === -1) {//data-src 属性の値にクエリパラメータが含まれているかを確認
-        file_tmp = "?"+date_param;//含まれれていない場合
-      }else{
-        file_tmp = "&"+date_param;//含まれている場合
-      }
-      imgs[i].src = imgs[i].getAttribute("data-src")+file_tmp;//画像のソース（src 属性）を、元々の data-src 属性に取得したクエリパラメータを追加して更新します。
-    }
-  }
-});
-
-</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./js/init.js"></script>
 </body>
 </html>

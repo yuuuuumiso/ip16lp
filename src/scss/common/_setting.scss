@@ -8,26 +8,20 @@ background:#000;
 font-family: 'Noto Sans JP', sans-serif;
 font-feature-settings:"palt"; /*文字詰め*/
 letter-spacing: 0.1em;
-color: #eee;
 font-size: 62.5%;/*デフォルト10px*/
 -webkit-tap-highlight-color: transparent; /* リンクがタップされている間の強調をなくす */
--webkit-text-size-adjust: none;/*スマホを横向き対策*/
 -webkit-font-smoothing: antialiased;// macでフォントを滑らかに
 -moz-osx-font-smoothing: grayscale;// macでフォントを滑らかに
 line-break: strict;
 overflow-wrap: break-word;
 text-wrap: balance;
 word-break: break-all;
--moz-osx-font-smoothing: grayscale;
 -webkit-text-size-adjust: 100%; 
 word-wrap: break-word;
 min-width: 320px;
 tab-size: 4;
 scroll-behavior: smooth;
 overflow-x: hidden;
-@include mq(tab) {
-  font-size:50%;
-}
 }
 @media (max-width: 768px) {
   .is-pc {
@@ -45,7 +39,6 @@ overflow-x: hidden;
     display: block !important;
   }
 }
-
 :target {
 scroll-margin-top: 3rem;
 }

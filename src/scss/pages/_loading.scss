@@ -43,12 +43,12 @@ body.appear .splashbg{
 
 
 /*画面遷移の後現れるコンテンツ設定*/
-#container{
+#l-container{
 	opacity: 0;/*はじめは透過0に*/
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear #container{
+body.appear #l-container{
 	animation-name:PageAnimeAppear;
 	animation-duration:1s;
 	animation-delay: 0.8s;

@@ -416,3 +416,9 @@ $(document).ready(function(){
         }
     }
 });
+
+
+$(".l-nav-btn").click(function () {//ボタンがクリックされたら
+	$(this).toggleClass('is-active');//ボタン自身に activeクラスを付与し
+    $(".l-nav-global").toggleClass('is-active');//ナビゲーションにpanelactiveクラスを付与
+});

@@ -15,9 +15,9 @@ font-size: 62.5%;/*デフォルト10px*/
 line-break: strict;
 overflow-wrap: break-word;
 text-wrap: balance;
-word-break: break-all;
--webkit-text-size-adjust: 100%; 
+// word-break: break-all;
 word-wrap: break-word;
+-webkit-text-size-adjust: 100%; 
 min-width: 320px;
 tab-size: 4;
 scroll-behavior: smooth;

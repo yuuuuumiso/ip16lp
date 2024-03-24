@@ -10,6 +10,8 @@
 anime
 ---------------------------------------------------- */
 
+/*高さ・位置・透過が変化して線が上から下に動く*/
+
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -204,9 +206,8 @@ body {
 	line-break: strict;
 	overflow-wrap: break-word;
 	text-wrap: balance;
-	word-break: break-all;
-	-webkit-text-size-adjust: 100%;
 	word-wrap: break-word;
+	-webkit-text-size-adjust: 100%;
 	min-width: 320px;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -245,6 +246,125 @@ a:hover,
 a:visited,
 a:active {
 	text-decoration: none;
+}
+
+.l-header {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 100vh;
+	background: #222222;
+}
+
+.l-header__inner {
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column; /* 子要素を垂直に配置 */
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between; /* 子要素を水平中央に配置 */
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; /* 子要素を垂直中央に配置 */
+}
+
+.l-nav-btn {
+	width: 50px;
+	height: 50px;
+	background-color: #222;
+	cursor: pointer;
+	position: relative;
+	z-index: 4;
+}
+
+.l-nav-btn span {
+	display: inline-block;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	position: absolute;
+	top: 50%;
+	height: 2px;
+	background-color: #ffffff;
+	width: 60%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.l-nav-btn span:nth-child(1) {
+	top: 40%;
+}
+
+.l-nav-btn span:nth-child(2) {
+	top: 60%;
+}
+
+.l-nav-btn.is-active span {
+	top: 50%;
+}
+
+.l-nav-lists {
+	-ms-flex-item-align: end;
+	align-self: flex-end; /* 下部に配置 */
+	text-align: center;
+	-ms-flex-item-align: stretch;
+	-ms-grid-row-align: stretch;
+	align-self: stretch;
+	position: relative;
+	z-index: 4;
+}
+
+.l-nav-global__overlay {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 50px);
+	height: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	background: #070707;
+}
+
+.l-nav-global.is-active .l-nav-global__overlay {
+	visibility: visible;
+	opacity: 0.8;
+}
+
+.l-nav-global__contents {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	min-width: 500px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: 0.5s ease-in-out 0.3s;
+	transition: 0.5s ease-in-out 0.3s;
+	background: #222;
+}
+
+.l-nav-global.is-active .l-nav-global__contents {
+	-webkit-transform: translateX(-50px);
+	transform: translateX(-50px);
 }
 
 /* area */
@@ -338,6 +458,21 @@ a:hover {
 	width: 100%;
 	border-radius: 10px;
 	margin-bottom: 10px;
+}
+
+.c-btn {
+	font-size: 2vw;
+	display: block;
+	background: #d11616;
+	color: #ffffff;
+	text-align: center;
+}
+
+.c-btn:hover {
+	background: #ffffff;
+	color: #d11616;
+	-webkit-transition: ease 0.4s;
+	transition: ease 0.4s;
 }
 
 /*========= ローディング画面のためのCSS ===============*/
@@ -467,12 +602,10 @@ body.appear #l-container {
 	transform: rotate(10deg);
 	-webkit-clip-path: inset(0 0 100% 0);
 	clip-path: inset(0 0 100% 0);
-	-webkit-transition: -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
-	transition: -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
-	transition: clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
-	transition: clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s, -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
-	-webkit-clip-path: inset(0);
-	clip-path: inset(0);
+	-webkit-transition: -webkit-clip-path 0.4s ease;
+	transition: -webkit-clip-path 0.4s ease;
+	transition: clip-path 0.4s ease;
+	transition: clip-path 0.4s ease, -webkit-clip-path 0.4s ease;
 }
 
 .p-visual:after {
@@ -487,12 +620,12 @@ body.appear #l-container {
 	transform: rotate(10deg);
 	-webkit-clip-path: inset(0 0 100% 0);
 	clip-path: inset(0 0 100% 0);
+	-webkit-clip-path: inset(0);
+	clip-path: inset(0);
 	-webkit-transition: -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
 	transition: -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
 	transition: clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
 	transition: clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s, -webkit-clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
-	-webkit-clip-path: inset(0);
-	clip-path: inset(0);
 }
 
 .p-visual__inner {
@@ -513,7 +646,7 @@ body.appear #l-container {
 .p-visual__lead {
 	color: #ffffff;
 	font-size: 4vw;
-	margin: 0 5vw 0 0vw;
+	margin: -2vw 5vw 0 0vw;
 }
 
 .p-visual__logo {
@@ -524,17 +657,72 @@ body.appear #l-container {
 .p-visual__img {
 	width: 48vw;
 	margin: 0 -5vw 0 10vw;
+	opacity: 0;
 }
 
 .p-visual__ttl {
 	line-height: 1.3;
-	margin-bottom: 1vw;
+	margin-bottom: 2.2vw;
 }
 
 .p-visual__ttlAcc {
 	display: block;
 	letter-spacing: 0.8em;
 	font-size: 0.5em;
+}
+
+body.appear .p-visual:before {
+	-webkit-clip-path: inset(0);
+	clip-path: inset(0);
+	-webkit-transition-delay: 2.4s;
+	transition-delay: 2.4s;
+}
+
+body.appear .p-visual__img {
+	-webkit-animation: fadeUpAnime ease 1s forwards 1.6s;
+	animation: fadeUpAnime ease 1s forwards 1.6s;
+}
+
+.scrolldown1 {
+	position: absolute;
+	left: 40px;
+	bottom: 3%;
+	height: 50px;
+	z-index: 9;
+}
+
+.scrolldown1 span {
+	position: absolute;
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	text-transform: uppercase;
+	left: -20px;
+	top: -32px;
+}
+
+.scrolldown1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 1px;
+	height: 30px;
+	background: #fff;
+	-webkit-animation: pathmove 1.4s ease-in-out infinite;
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity: 0;
+}
+
+.p-about {
+	background: #444444;
+}
+
+.p-about__inner {
+	max-width: 62.5%;
+	background: #ddd;
+	margin-inline: auto;
 }
 
 @media (min-width: 768px) {
@@ -545,14 +733,6 @@ body.appear #l-container {
 
 .is-pc {
 	display: block !important;
-}
-
-}
-
-@media (max-width: 960px) {
-
-.l-header {
-	height: 30px;
 }
 
 }
@@ -681,6 +861,80 @@ body.appear #l-container {
 	-webkit-box-shadow: 0 -2em;
 	box-shadow: 0 -2em;
 	height: 2em;
+}
+
+}
+
+@-webkit-keyframes fadeUpAnime {
+
+from {
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+to {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+}
+
+@keyframes fadeUpAnime {
+
+from {
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+to {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+}
+
+@-webkit-keyframes pathmove {
+
+0% {
+	height: 0;
+	top: 0;
+	opacity: 0;
+}
+
+30% {
+	height: 30px;
+	opacity: 1;
+}
+
+100% {
+	height: 0;
+	top: 50px;
+	opacity: 0;
+}
+
+}
+
+@keyframes pathmove {
+
+0% {
+	height: 0;
+	top: 0;
+	opacity: 0;
+}
+
+30% {
+	height: 30px;
+	opacity: 1;
+}
+
+100% {
+	height: 0;
+	top: 50px;
+	opacity: 0;
 }
 
 }

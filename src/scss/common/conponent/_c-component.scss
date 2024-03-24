@@ -87,3 +87,17 @@ a:hover {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+// btn
+.c-btn{
+    font-size: 2vw;
+    display: block;
+    background: $color-main;
+    color: $color-white;
+    text-align: center;
+    &:hover{
+        background: $color-white;
+        color: $color-main;
+        transition: ease 0.4s;
+    }
+}

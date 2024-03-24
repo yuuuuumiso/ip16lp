@@ -2,10 +2,92 @@
 @use "../../global/mixin" as *;
 
 
-@media (max-width: 960px) {
+
 .l-header{
-    height: 30px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100vh;
+    background: #222222;
+    &__inner{
+        height: 100%;
+        display: flex;
+        flex-direction: column; /* 子要素を垂直に配置 */
+        justify-content: space-between; /* 子要素を水平中央に配置 */
+        align-items: center; /* 子要素を垂直中央に配置 */
     }
 }
+.l-nav-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        top: 50%;
+        height: 2px;
+        background-color: #ffffff;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        &:nth-child(1){
+            top: 40%;
+        }
+        &:nth-child(2){
+            top: 60%;
+        }
+    }
+    &.is-active{
+        span {
+            top: 50%;            
+        }        
+    }
+}
+.l-nav-lists{
+    align-self: flex-end; /* 下部に配置 */
+    text-align: center;
+    align-self: stretch;
+    position: relative;
+    z-index: 4;
+}
 
-
+.l-nav-global__overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 50px);
+    height: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+    background: #070707;
+}
+.l-nav-global.is-active .l-nav-global__overlay{
+    visibility: visible;
+    opacity: 0.8;
+}
+.l-nav-global__contents{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    min-width: 500px;
+    transform: translateX(100%);
+    transition: .5s ease-in-out .3s;
+    background: #222;
+}
+.l-nav-global.is-active .l-nav-global__contents{
+    transform: translateX(-50px);
+}

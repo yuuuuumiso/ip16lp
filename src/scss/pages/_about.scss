@@ -1,3 +1,11 @@
 @use "../global/variable" as *;
 @use "../global/mixin" as *;
 
+.p-about{
+    background: #444444;
+    &__inner{
+        max-width: calc(1200 / 1920 * 100%);
+        background: #ddd;
+        margin-inline: auto;
+    }
+}

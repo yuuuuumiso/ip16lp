@@ -282,6 +282,7 @@ a:active {
 	cursor: pointer;
 	position: relative;
 	z-index: 4;
+	margin-top: 80px;
 }
 
 .l-nav-btn span {
@@ -319,6 +320,14 @@ a:active {
 	align-self: stretch;
 	position: relative;
 	z-index: 4;
+}
+
+.l-nav-lists li {
+	margin-bottom: 10px;
+}
+
+.l-nav-lists li i {
+	font-size: 24px;
 }
 
 .l-nav-global__overlay {
@@ -371,6 +380,10 @@ a:active {
 
 #container {
 	overflow-x: hidden;
+}
+
+.scrollgress {
+	z-index: 99;
 }
 
 /* モーダルのスタイリング */

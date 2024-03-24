@@ -1,3 +1,18 @@
+
+/*===========================================================*/
+/*機能編  9-1-5 スクロールをするとエリアの高さに合わせて線が伸びる*/
+/*===========================================================*/
+
+$(function() {
+	$('html').scrollgress({//バーの高さの基準となるエリア指定
+		height: '5px',//バーの高さ
+		color: '#d11616',
+		success: function() {
+			console.log('Scrollgress has been initiated.');
+		}
+	});
+});
+
 /*===========================================================*/
 /* 機能編 5-1-1 ドロップダウンメニュー（上）*/
 /*===========================================================*/
@@ -25,23 +40,23 @@ function mediaQueriesWin(){
 /*===========================================================*/
 
 //スクロール途中からヘッダーを出現させるための設定を関数でまとめる
-function FixedAnime() {
-	var elemTop = $('#service').offset().top;//#serviceの位置まできたら
-	var scroll = $(window).scrollTop();
+// function FixedAnime() {
+// 	// var elemTop = $('#service').offset().top;//#serviceの位置まできたら
+// 	var scroll = $(window).scrollTop();
 
-	if(scroll <= 20){//上から20pxスクロールされたら
-		$('#header').addClass('DownMove');//DownMoveというクラス名を除き
-	} else if (scroll >= elemTop){
-			$('#header').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
-			$('#header').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
+// 	if(scroll <= 20){//上から20pxスクロールされたら
+// 		$('#header').addClass('DownMove');//DownMoveというクラス名を除き
+// 	} else if (scroll >= elemTop){
+// 			$('#header').removeClass('UpMove');//#headerについているUpMoveというクラス名を除く
+// 			$('#header').addClass('DownMove');//#headerについているDownMoveというクラス名を付与
 
-		}else{
-			if($('#header').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
-				$('#header').removeClass('DownMove');//DownMoveというクラス名を除き
-				$('#header').addClass('UpMove');//UpnMoveというクラス名を付与
-			}
-		}
-}
+// 		}else{
+// 			if($('#header').hasClass('DownMove')){//すでに#headerにDownMoveというクラス名がついていたら
+// 				$('#header').removeClass('DownMove');//DownMoveというクラス名を除き
+// 				$('#header').addClass('UpMove');//UpnMoveというクラス名を付与
+// 			}
+// 		}
+// }
 
 /*===========================================================*/
 /* 機能編 5-1-11 クリックしたらナビが上から下に出現 */
@@ -62,43 +77,43 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 /*===========================================================*/
 
 //スクロールした際の動きを関数でまとめる
-function setFadeElement(){
-	var windowH = $(window).height();	//ウィンドウの高さを取得
-	var scroll = $(window).scrollTop(); //スクロール値を取得
+// function setFadeElement(){
+// 	var windowH = $(window).height();	//ウィンドウの高さを取得
+// 	var scroll = $(window).scrollTop(); //スクロール値を取得
     
-    //出現範囲の指定
-	var contentsTop = Math.round($('#contact').offset().top);	//要素までの高さ四捨五入した値を取得
-	var contentsH = $('#contact').outerHeight(true);	//要素の高さを取得
+//     //出現範囲の指定
+// 	// var contentsTop = Math.round($('#contact').offset().top);	//要素までの高さ四捨五入した値を取得
+// 	// var contentsH = $('#contact').outerHeight(true);	//要素の高さを取得
     
-    //2つ目の出現範囲の指定※任意
-	var contentsTop2 = Math.round($('#footer').offset().top);	//要素までの高さ四捨五入した値を取得
-	var contentsH2 = $('#footer').outerHeight(true);//要素の高さを取得
+//     //2つ目の出現範囲の指定※任意
+// 	// var contentsTop2 = Math.round($('#footer').offset().top);	//要素までの高さ四捨五入した値を取得
+// 	// var contentsH2 = $('#footer').outerHeight(true);//要素の高さを取得
 
-    //出現範囲内に入ったかどうかをチェック
-	if(scroll+windowH >= contentsTop && scroll+windowH  <= contentsTop+contentsH){
-		$("#page-top").addClass("LeftMove");    //入っていたらLeftMoveをクラス追加
-		$("#page-top").removeClass("RightMove");   //RightMoveを削除
-		$(".hide-btn").removeClass("hide-btn");	  //hide-btnを削除
-	}//2つ目の出現範囲に入ったかどうかをチェック※任意
-    else if(scroll+windowH >= contentsTop2 && scroll+windowH <= contentsTop2+contentsH2){       
-		$("#page-top").addClass("LeftMove");    //入っていたらLeftMoveをクラス追加
-		$("#page-top").removeClass("RightMove");   //RightMoveを削除
-	}//それ以外は
-    else{
-        if(!$(".hide-btn").length){				//サイト表示時にRightMoveクラスを一瞬付与させないためのクラス付け。hide-btnがなければ下記の動作を行う
-        $("#page-top").addClass("RightMove");  //RightMoveをクラス追加
-		$("#page-top").removeClass("LeftMove"); //LeftMoveを削除	
-        }
-	}
-}
+//     //出現範囲内に入ったかどうかをチェック
+// 	if(scroll+windowH >= contentsTop && scroll+windowH  <= contentsTop+contentsH){
+// 		$("#page-top").addClass("LeftMove");    //入っていたらLeftMoveをクラス追加
+// 		$("#page-top").removeClass("RightMove");   //RightMoveを削除
+// 		$(".hide-btn").removeClass("hide-btn");	  //hide-btnを削除
+// 	}//2つ目の出現範囲に入ったかどうかをチェック※任意
+//     else if(scroll+windowH >= contentsTop2 && scroll+windowH <= contentsTop2+contentsH2){       
+// 		$("#page-top").addClass("LeftMove");    //入っていたらLeftMoveをクラス追加
+// 		$("#page-top").removeClass("RightMove");   //RightMoveを削除
+// 	}//それ以外は
+//     else{
+//         if(!$(".hide-btn").length){				//サイト表示時にRightMoveクラスを一瞬付与させないためのクラス付け。hide-btnがなければ下記の動作を行う
+//         $("#page-top").addClass("RightMove");  //RightMoveをクラス追加
+// 		$("#page-top").removeClass("LeftMove"); //LeftMoveを削除	
+//         }
+// 	}
+// }
 
 // #page-topをクリックした際の設定
-$('#page-top').click(function () {
-    $('body,html').animate({
-        scrollTop: 0//ページトップまでスクロール
-    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
-    return false;//リンク自体の無効化
-});
+// $('#page-top').click(function () {
+//     $('body,html').animate({
+//         scrollTop: 0//ページトップまでスクロール
+//     }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+//     return false;//リンク自体の無効化
+// });
 
 /*===========================================================*/
 /*機能編 5-4-1タブメニュー*/
@@ -277,8 +292,8 @@ $(window).resize(function() {
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-	FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
-	setFadeElement();// 機能編 8-1-4 ページの指定の範囲内で出現（右から左）の関数を呼ぶ
+	// FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
+	// setFadeElement();// 機能編 8-1-4 ページの指定の範囲内で出現（右から左）の関数を呼ぶ
     fadeAnime();// 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
 	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
 	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
@@ -295,7 +310,7 @@ $(window).on('load',function(){
     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与 
     
     mediaQueriesWin();// 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
-	FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
+	// FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
 	setFadeElement();// 機能編 8-1-4  ページトップリンク:ページの指定の範囲内で出現（右から左）の関数を呼ぶ
     
     /*機能編 5-4-1タブメニューの読み込み*/
@@ -422,3 +437,4 @@ $(".l-nav-btn").click(function () {//ボタンがクリックされたら
 	$(this).toggleClass('is-active');//ボタン自身に activeクラスを付与し
     $(".l-nav-global").toggleClass('is-active');//ナビゲーションにpanelactiveクラスを付与
 });
+

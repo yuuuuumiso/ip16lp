@@ -26,6 +26,7 @@
     cursor: pointer;
     position: relative;
     z-index: 4;
+    margin-top: 80px;
     span {
         display: inline-block;
         transition: all .4s;
@@ -55,6 +56,12 @@
     align-self: stretch;
     position: relative;
     z-index: 4;
+    li{
+        margin-bottom: 10px;
+        i{
+            font-size: 24px;
+        }
+    }
 }
 
 .l-nav-global__overlay {

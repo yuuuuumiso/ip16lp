@@ -377,6 +377,52 @@ a:active {
 	transform: translateX(-50px);
 }
 
+.l-footer {
+	position: relative;
+}
+
+.page_top span {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 1.5vw;
+	height: 1.65vw;
+	margin: auto;
+	overflow: hidden;
+	background: url(../img/pagetop_arrow.png) no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	animation: ROLLRING 14s linear reverse infinite;
+}
+
+.page_top {
+	display: block;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	right: 80px;
+	bottom: 2vw;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 6vw;
+	height: 6vw;
+	overflow: hidden;
+	background: url(../img/pagetop_ring.png) no-repeat;
+	background-size: contain;
+	text-indent: -9999px;
+	-webkit-animation: ROLLRING 14s linear normal infinite;
+	animation: ROLLRING 14s linear normal infinite;
+	will-change: transform;
+}
+
 /* area */
 
 #container {
@@ -949,6 +995,34 @@ to {
 	height: 0;
 	top: 50px;
 	opacity: 0;
+}
+
+}
+
+@-webkit-keyframes ROLLRING {
+
+0% {
+	-webkit-transform: rotateZ(0deg);
+	transform: rotateZ(0deg);
+}
+
+100% {
+	-webkit-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
+}
+
+}
+
+@keyframes ROLLRING {
+
+0% {
+	-webkit-transform: rotateZ(0deg);
+	transform: rotateZ(0deg);
+}
+
+100% {
+	-webkit-transform: rotateZ(360deg);
+	transform: rotateZ(360deg);
 }
 
 }

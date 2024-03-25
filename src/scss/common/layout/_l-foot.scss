@@ -1,3 +1,41 @@
 @charset "UTF-8";
 @use "../../global/variable" as *;
 @use "../../global/mixin" as *;
+
+.l-footer{
+position: relative;
+}
+.page_top span {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1.5vw;
+    height: 1.65vw;
+    margin: auto;
+    overflow: hidden;
+    background: url(../img/pagetop_arrow.png) no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    animation: ROLLRING 14s linear reverse infinite;
+}
+
+.page_top {
+    display: block;
+    display: flex;
+    position: absolute;
+    right: 80px;
+    bottom: 2vw;
+    align-items: center;
+    justify-content: center;
+    width: 6vw;
+    height: 6vw;
+    overflow: hidden;
+    background: url(../img/pagetop_ring.png) no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    animation: ROLLRING 14s linear normal infinite;
+    will-change: transform;
+}

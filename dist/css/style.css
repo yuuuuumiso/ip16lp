@@ -195,18 +195,19 @@ body {
 	line-height: 1.85;
 	color: #2e1e1e;
 	background: #000;
-	font-family: "Noto Sans JP", sans-serif;
-	-webkit-font-feature-settings: "palt";
-	font-feature-settings: "palt"; /*文字詰め*/
+	font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 	letter-spacing: 0.1em;
+	-webkit-font-feature-settings: "palt";
+	font-feature-settings: "palt";
+	text-spacing-trim: space-first;
 	font-size: 62.5%; /*デフォルト10px*/
 	-webkit-tap-highlight-color: transparent; /* リンクがタップされている間の強調をなくす */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	line-break: strict;
-	overflow-wrap: break-word;
 	text-wrap: balance;
-	word-wrap: break-word;
+	word-break: auto-phrase;
+	overflow-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
 	min-width: 320px;
 	-moz-tab-size: 4;
@@ -857,7 +858,7 @@ body.appear .p-visual__img {
 40% {
 	-webkit-box-shadow: 0 -2em;
 	box-shadow: 0 -2em;
-	height: 2em;
+	height: 2.2em;
 }
 
 }
@@ -873,7 +874,7 @@ body.appear .p-visual__img {
 40% {
 	-webkit-box-shadow: 0 -2em;
 	box-shadow: 0 -2em;
-	height: 2em;
+	height: 2.2em;
 }
 
 }

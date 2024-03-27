@@ -1,6 +1,8 @@
 @use "../global/mixin" as *;
 @use "../global/variable" as *;
-
+html{
+  scroll-behavior: smooth;//スムーススクロール
+}
 body{
 line-height: 1.85;
 color: $color-font;
@@ -20,7 +22,6 @@ overflow-wrap: break-word;//英語対策：表示範囲に収まらない長い�
 -webkit-text-size-adjust: 100%; //スマホ横向き対策
 min-width: 320px;
 tab-size: 4;//&#0009;使用時のスペース
-scroll-behavior: smooth;//スムーススクロール
 overflow-x: hidden;
 }
 @media (max-width: 768px) {

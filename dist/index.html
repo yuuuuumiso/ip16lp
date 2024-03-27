@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://www.rakuten.ne.jp/gold/pga-shop/season/outlet_rakuten/img/ogp.jpg" />
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body>
+<body id="body">
 
   <div id="splash"><div id="splash-logo"><div class="loader"></div></div></div>
   <div class="splashbg"></div><!---画面遷移用-->
@@ -64,11 +64,12 @@
 
 
 <section class="p-about">
+    <div class="p-about__bg"></div>
     <div class="p-about__inner">
         <figure class="p-about__img"><img src="./img/mv_img01.png" alt=""></figure>
-        <div class="p-about__img">
-            <h2 class="p-about__ttl">タイトル</h2>
-            <p class="p-about__txt"></p>
+        <div class="p-about__box">
+            <h2 class="p-about__ttl">タイトルタイトルタイトル</h2>
+            <p class="p-about__txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストhttp://onocom.net/code/css-loop-slider/</p>
         </div>
     </div>
 </section>
@@ -79,6 +80,7 @@ https://m-hand.jp/
 https://sanlets.com/
 https://sus.i-goods.co.jp/
 https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/1-2/1-2.html
+https://qiita.com/soundweaver/items/9b5a3a7c0b0e198f4570
 <!-- モーダル -->
 <div id="modal" class="modal">
     <div class="modal-content">
@@ -137,13 +139,12 @@ https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/1-2/1-2.html
     <div class="l-footer__inner">
         width: fit-content;
         margin-inline: auto;
-        inline-size: fit-content;
         grid,gap,subgird
         scroll-behavier
         revert
         aspect-racio
         100svw(100svh)
-        コンテナクエリ、スタイルクエリ
+        コンテナクエリ、スタイルクエリ、inline-size: fit-content;
         :hasセレクタ,where,is,not
         カスタムプロパティ
         text-underline-offset
@@ -152,12 +153,11 @@ https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/1-2/1-2.html
         論理プロパティ：margin-start
         @media (width >= 400px) {}
         スクロールバー
-        mvにscrollのやつ
         mv固定
         今時っぽいトップへ戻る、
         clampをパディングとかで：https://zenn.dev/kiteruri/articles/e512278dfeb613
     </div>
-    <a href="javascript:void(0);" class="page_top"><span>PAGE TOP</span></a>
+    <a href="#body" class="page_top"><span>PAGE TOP</span></a>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

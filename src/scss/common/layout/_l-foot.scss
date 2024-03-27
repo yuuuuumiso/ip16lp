@@ -28,6 +28,7 @@ position: relative;
     position: absolute;
     right: 80px;
     bottom: 2vw;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     width: 6vw;
@@ -38,4 +39,5 @@ position: relative;
     text-indent: -9999px;
     animation: ROLLRING 14s linear normal infinite;
     will-change: transform;
+    z-index: 999;
 }

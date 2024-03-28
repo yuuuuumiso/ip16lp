@@ -311,7 +311,7 @@ $(window).on('load',function(){
     
     mediaQueriesWin();// 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
 	// FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
-	setFadeElement();// 機能編 8-1-4  ページトップリンク:ページの指定の範囲内で出現（右から左）の関数を呼ぶ
+	//setFadeElement();// 機能編 8-1-4  ページトップリンク:ページの指定の範囲内で出現（右から左）の関数を呼ぶ
     
     /*機能編 5-4-1タブメニューの読み込み*/
     var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
@@ -377,6 +377,7 @@ $(window).on('load',function(){
 $(document).ready(function(){
     // モーダルの表示
     $(".modalBtn").click(function(){
+		//alert();
         var index = $(this).data("index");
         $("#modal").css("display", "block");
         // body要素にoverflow:hiddenを設定してスクロールを禁止

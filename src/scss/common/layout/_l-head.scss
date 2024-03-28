@@ -90,11 +90,14 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    min-width: 500px;
+    width: 40svw;
     transform: translateX(100%);
     transition: .5s ease-in-out .3s;
     background: #222;
 }
 .l-nav-global.is-active .l-nav-global__contents{
     transform: translateX(-50px);
+}
+.l-nav-global__list a{
+color: #fff;
 }

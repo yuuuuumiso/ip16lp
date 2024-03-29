@@ -5,8 +5,20 @@
     background: $color-white;
     position: relative;
     z-index: 5;
-    padding: 30px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
+    padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
     width: calc(100vw - 50px);
+    &:before{
+        content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(180deg, #eeeeee 0%, #eaeaea 10%, #eaeaea 70%, #f3f3f3 100%);
+    transform: skewX(30deg);
+    z-index: -1;
+    pointer-events: none;
+    }
     &__inner{
         max-width: 1200px;
         margin-inline: auto;
@@ -36,9 +48,8 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #ced4da;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    border-radius: 5px;
+    width:clamp(18.75rem, 5.114rem + 68.18vw, 56.25rem);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -49,7 +60,7 @@
 .close {
     color: #6c757d;
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
     font-size: 28px;
     font-weight: bold;
@@ -81,16 +92,87 @@ a.modalBtn:hover {
 }
 
 /* カードのスタイリング */
-.card {
+.col{
     background-color: #fff;
-    padding: 20px;
-    border-radius: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px 25px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1) ;
+    transition: all .3s;
     text-align: center;
+    &:hover{
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+    border-color: transparent;
+    }
+    &__img{
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    &__ttl{
+        font-family: "Oswald", sans-serif;
+        margin-bottom: 0.5rem;
+        font-size:clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+    }
+    &__colors{
+        display: flex;
+        justify-content: center;
+    }
+    &__color{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: clamp(0.875rem, 0.653rem + 0.46vw, 1rem);
+        height: clamp(0.875rem, 0.653rem + 0.46vw, 1rem);
+        line-height: 24px;
+        border-radius: 50%;
+        background: #000;
+        border: #000 1px solid;
+        margin-inline:0.2em;
+        &--white{
+            background: #fff;
+            border: #000 1px solid;
+        }
+        &--blue{
+            background: #2269B7;
+            border: #2269B7 1px solid;
+        }
+    }
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+#modalContent{
+    display: flex;
+    justify-content: center;
+    .modal__leftCol{
+        margin: 0 1.5rem 0 0;
+        width: 46%;
+    }
+    .modal__rightCol{
+        width: 50%;
+        .name{
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .text{
+            font-size: 0.8rem;            
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.modalLink{
+    width: 49%;
+}
+.modalLink a{
+    display: block;
+    padding: 0.8rem;
+    text-align: center;   
+    background: #222;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+.modal__rightBox{
+    display: flex;
+    flex-wrap: wrap ;
+justify-content: space-between;
 }

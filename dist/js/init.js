@@ -363,7 +363,7 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
 
     // モーダルが開かれるたびに全ての色情報を非表示にする
-    $(".color1, .color2, .color3, .color4").addClass("hide");
+    $(".model1, .model2, .model3, .model4").addClass("hide");
 
     // JSONからデータを読み込む
     $.getJSON("./data/data.json", function (data) {
@@ -389,25 +389,25 @@ $(document).ready(function () {
 
   // モーダルの内容を表示
   function displayModalContent(data) {
-    $(".name").text("Name: " + data.name);
-    $(".age").text("Age: " + data.age);
-    $(".city").text("City: " + data.city);
+    $(".name").text(data.name);
+    $(".text").text(data.text);
+    $(".modal__img").attr("src", data.src);
     // JSONデータが存在する場合のみ該当する要素を表示
-    if (data.color1) {
-      $(".color1").removeClass("hide");
-      $(".color1Link").text(data.color1.name).attr("href", data.color1.link);
+    if (data.model1) {
+      $(".model1").removeClass("hide");
+      $(".model1Link").text(data.model1.name).attr("href", data.model1.link);
     }
-    if (data.color2) {
-      $(".color2").removeClass("hide");
-      $(".color2Link").text(data.color2.name).attr("href", data.color2.link);
+    if (data.model2) {
+      $(".model2").removeClass("hide");
+      $(".model2Link").text(data.model2.name).attr("href", data.model2.link);
     }
-    if (data.color3) {
-      $(".color3").removeClass("hide");
-      $(".color3Link").text(data.color3.name).attr("href", data.color3.link);
+    if (data.model3) {
+      $(".model3").removeClass("hide");
+      $(".model3Link").text(data.model3.name).attr("href", data.model3.link);
     }
-    if (data.color4) {
-      $(".color4").removeClass("hide");
-      $(".color4Link").text(data.color4.name).attr("href", data.color4.link);
+    if (data.model4) {
+      $(".model4").removeClass("hide");
+      $(".model4Link").text(data.model4.name).attr("href", data.model4.link);
     }
   }
 });

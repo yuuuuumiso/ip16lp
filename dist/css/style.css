@@ -457,6 +457,18 @@ a:active {
 	transition: ease 0.4s;
 }
 
+.c-ttl {
+	border-left: 5px solid #000;
+	padding-left: 0.4em;
+	line-height: 1.4;
+	font-size: clamp(1.25rem, -0.528rem + 3.7vw, 2.25rem);
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 2.2rem;
+}
+
 /*========= ローディング画面のためのCSS ===============*/
 
 #splash {
@@ -702,7 +714,7 @@ body.appear .p-visual__img {
 	background: #f4f4f4;
 	position: relative;
 	z-index: 10;
-	padding: 30px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
+	padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
 	width: calc(100vw - 50px);
 }
 
@@ -757,8 +769,23 @@ body.appear .p-visual__img {
 	background: #ffffff;
 	position: relative;
 	z-index: 5;
-	padding: 30px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
+	padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
 	width: calc(100vw - 50px);
+}
+
+.item:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 80%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(10%, #eaeaea), color-stop(70%, #eaeaea), to(#f3f3f3));
+	background: linear-gradient(180deg, #eeeeee 0%, #eaeaea 10%, #eaeaea 70%, #f3f3f3 100%);
+	-webkit-transform: skewX(30deg);
+	transform: skewX(30deg);
+	z-index: -1;
+	pointer-events: none;
 }
 
 .item__inner {
@@ -793,9 +820,8 @@ body.appear .p-visual__img {
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #ced4da;
-	border-radius: 10px;
-	width: 80%;
-	max-width: 600px;
+	border-radius: 5px;
+	width: clamp(18.75rem, 5.114rem + 68.18vw, 56.25rem);
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -808,7 +834,7 @@ body.appear .p-visual__img {
 .close {
 	color: #6c757d;
 	position: absolute;
-	top: 10px;
+	top: 0px;
 	right: 10px;
 	font-size: 28px;
 	font-weight: bold;
@@ -843,19 +869,118 @@ a.modalBtn:hover {
 
 /* カードのスタイリング */
 
-.card {
+.col {
 	background-color: #fff;
-	padding: 20px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 15px 10px 25px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 	text-align: center;
 }
 
-.card img {
+.col:hover {
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+	border-color: transparent;
+}
+
+.col__img {
+	margin-bottom: 5px;
 	width: 100%;
-	border-radius: 10px;
-	margin-bottom: 10px;
+}
+
+.col__ttl {
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 0.5rem;
+	font-size: clamp(1rem, 0.111rem + 1.85vw, 1.5rem);
+}
+
+.col__colors {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.col__color {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	width: clamp(0.875rem, 0.653rem + 0.46vw, 1rem);
+	height: clamp(0.875rem, 0.653rem + 0.46vw, 1rem);
+	line-height: 24px;
+	border-radius: 50%;
+	background: #000;
+	border: #000 1px solid;
+	margin-inline: 0.2em;
+}
+
+.col__color--white {
+	background: #fff;
+	border: #000 1px solid;
+}
+
+.col__color--blue {
+	background: #2269B7;
+	border: #2269B7 1px solid;
+}
+
+#modalContent {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#modalContent .modal__leftCol {
+	margin: 0 1.5rem 0 0;
+	width: 46%;
+}
+
+#modalContent .modal__rightCol {
+	width: 50%;
+}
+
+#modalContent .modal__rightCol .name {
+	margin-bottom: 0.3rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#modalContent .modal__rightCol .text {
+	font-size: 0.8rem;
+	margin-bottom: 1rem;
+}
+
+.modalLink {
+	width: 49%;
+}
+
+.modalLink a {
+	display: block;
+	padding: 0.8rem;
+	text-align: center;
+	background: #222;
+	color: #fff;
+	margin-bottom: 0.3rem;
+	font-size: 0.8rem;
+}
+
+.modal__rightBox {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 @media (min-width: 768px) {

@@ -1,84 +1,84 @@
 [{
-  "name": "John",
-  "age": 30,
-  "city": "New York",
-  "color1": {
+  "name": "ガラスケース",
+  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "model1": {
     "name": "111iPhone 15",
     "link": "https://example.com/iphone15"
   },
-  "color2": {
+  "model2": {
     "name": "111iPhone 15 Pro",
     "link": "https://example.com/iphone15pro"
   },
-  "color3": {
+  "model3": {
     "name": "111iPhone 15 Plus",
     "link": "https://example.com/iphone15plus"
   },
-  "color4": {
+  "model4": {
     "name": "111iPhone 15 Pro Max",
     "link": "https://example.com/iphone15promax"
   }
 }, {
   "name": "Alice",
-  "age": 25,
-  "city": "Los Angeles",
-  "color1": {
+  "text": "紹介文",
+  "src": "Los Angeles",
+  "model1": {
     "name": "22222iPhone 15 Pro",
     "link": "https://example.com/22222iphone15pro"
   },
-  "color2": {
+  "model2": {
     "name": "22222iPhone 15 Plus",
     "link": "https://example.com/22222iphone15plus"
   },
-  "color3": {
+  "model3": {
     "name": "22222iPhone 15 Pro Max",
     "link": "https://example.com/22222iphone15promax"
   }
 }, {
   "name": "Bob",
-  "age": 35,
-  "city": "Chicago",
-  "color1": {
+  "text": "紹介文",
+  "src": "Chicago",
+  "model1": {
     "name": "3333iPhone 15 Plus",
     "link": "https://example.com/3333iphone15plus"
   },
-  "color2": {
+  "model2": {
     "name": "3333iPhone 15 Pro Max",
     "link": "https://example.com/3333iphone15promax"
   }
 }, {
   "name": "Eva",
-  "age": 28,
-  "city": "San Francisco",
-  "color1": {
+  "text": "紹介文",
+  "src": "San Francisco",
+  "model1": {
     "name": "44444iPhone 15",
     "link": "https://example.com/44444iphone15"
   },
-  "color2": {
+  "model2": {
     "name": "44444iPhone 15 Pro",
     "link": "https://example.com/44444iphone15pro"
   },
-  "color3": {
+  "model3": {
     "name": "44444iPhone 15 Plus",
     "link": "https://example.com/44444iphone15plus"
   },
-  "color4": {
+  "model4": {
     "name": "44444iPhone 15 Pro Max",
     "link": "https://example.com/44444iphone15promax"
   }
 }, {
   "name": "Michael",
-  "age": 40,
-  "city": "Houston",
-  "color1": {
+  "text": "紹介文",
+  "src": "Houston",
+  "model1": {
     "name": "55555iPhone 15 Pro",
     "link": "https://example.com/55555iphone15pro"
   },
-  "color2": {
+  "model2": {
     "name": "55555iPhone 15 Plus",
     "link": "https://example.com/55555iphone15plus"
   },
-  "color3": {
+  "model3": {
     "name": "55555iPhone 15 Pro Max",
     "link": "https://example.com/55555iphone15promax"
   }

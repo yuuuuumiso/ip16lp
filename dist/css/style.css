@@ -386,6 +386,52 @@ a:active {
 
 .l-footer {
 	position: relative;
+	padding-block: 10vh;
+	background: #444;
+	z-index: 99;
+}
+
+/* area */
+
+#container {
+	overflow-x: hidden;
+	position: relative;
+	z-index: 99;
+}
+
+.l-main {
+	overflow: hidden;
+}
+
+.scrollgress {
+	z-index: 20;
+}
+
+.c-btn {
+	font-size: 2vw;
+	display: block;
+	background: #d11616;
+	color: #ffffff;
+	text-align: center;
+}
+
+.c-btn:hover {
+	background: #ffffff;
+	color: #d11616;
+	-webkit-transition: ease 0.4s;
+	transition: ease 0.4s;
+}
+
+.c-ttl {
+	border-left: 5px solid #d11616;
+	padding-left: 0.4em;
+	line-height: 1.4;
+	font-size: clamp(1.25rem, -0.528rem + 3.7vw, 2.25rem);
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 2.2rem;
 }
 
 .page_top span {
@@ -429,44 +475,7 @@ a:active {
 	-webkit-animation: ROLLRING 14s linear normal infinite;
 	animation: ROLLRING 14s linear normal infinite;
 	will-change: transform;
-	z-index: 999;
-}
-
-/* area */
-
-#container {
-	overflow-x: hidden;
-}
-
-.scrollgress {
-	z-index: 20;
-}
-
-.c-btn {
-	font-size: 2vw;
-	display: block;
-	background: #d11616;
-	color: #ffffff;
-	text-align: center;
-}
-
-.c-btn:hover {
-	background: #ffffff;
-	color: #d11616;
-	-webkit-transition: ease 0.4s;
-	transition: ease 0.4s;
-}
-
-.c-ttl {
-	border-left: 5px solid #000;
-	padding-left: 0.4em;
-	line-height: 1.4;
-	font-size: clamp(1.25rem, -0.528rem + 3.7vw, 2.25rem);
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	font-family: "Oswald", sans-serif;
-	margin-bottom: 2.2rem;
+	z-index: 99999;
 }
 
 /*========= ローディング画面のためのCSS ===============*/
@@ -771,6 +780,7 @@ body.appear .p-visual__img {
 	z-index: 5;
 	padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
 	width: calc(100vw - 50px);
+	overflow: hidden;
 }
 
 .item:before {
@@ -806,7 +816,7 @@ body.appear .p-visual__img {
 .modal {
 	display: none; /* 初期状態では非表示 */
 	position: fixed;
-	z-index: 10;
+	z-index: 9999;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -948,14 +958,14 @@ a.modalBtn:hover {
 }
 
 #modalContent .modal__rightCol .name {
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
 	font-weight: bold;
 }
 
 #modalContent .modal__rightCol .text {
 	font-size: 0.8rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .modalLink {
@@ -966,10 +976,16 @@ a.modalBtn:hover {
 	display: block;
 	padding: 0.8rem;
 	text-align: center;
-	background: #222;
+	background: #222222;
+	border: 1px solid #222222;
 	color: #fff;
 	margin-bottom: 0.3rem;
 	font-size: 0.8rem;
+}
+
+.modalLink a:hover {
+	background: #ffffff;
+	color: #222222;
 }
 
 .modal__rightBox {

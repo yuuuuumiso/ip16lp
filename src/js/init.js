@@ -378,7 +378,8 @@ $(document).ready(function(){
     $(".modalBtn").click(function(){
 		//alert();
         var index = $(this).data("index");
-        $("#modal").css("display", "block");
+        //$("#modal").css("display", "block");
+		$("#modal").fadeIn(200);
         // body要素にoverflow:hiddenを設定してスクロールを禁止
         $("body").css("overflow", "hidden");
 
@@ -394,16 +395,18 @@ $(document).ready(function(){
     // モーダルの背景をクリックしてモーダルを閉じる
     $("#modal").click(function(event){
         if(event.target.id === "modal"){
-            $("#modal").css("display", "none");
-            // body要素のoverflow:hiddenを解除してスクロールを許可
+//            $("#modal").css("display", "none");
+			$("#modal").fadeOut(200);
+			// body要素のoverflow:hiddenを解除してスクロールを許可
             $("body").css("overflow", "auto");
         }
     });
 
     // 閉じるボタンがクリックされたときの処理
     $(".close").click(function(){
-        $("#modal").css("display", "none");
-        // body要素のoverflow:hiddenを解除してスクロールを許可
+        //$("#modal").css("display", "none");
+		$("#modal").fadeOut(200);
+		// body要素のoverflow:hiddenを解除してスクロールを許可
         $("body").css("overflow", "auto");
     });
 

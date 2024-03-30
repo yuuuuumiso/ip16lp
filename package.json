@@ -17,7 +17,6 @@
     "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
     "gulp-dart-sass": "^1.1.0",
     "gulp-ejs": "^5.1.0",
     "gulp-imagemin": "^7.1.0",

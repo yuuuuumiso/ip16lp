@@ -7,6 +7,7 @@
     z-index: 5;
     padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
     width: calc(100vw - 50px);
+    overflow: hidden;
     &:before{
         content: '';
     position: absolute;
@@ -34,7 +35,7 @@
 .modal {
     display: none; /* 初期状態では非表示 */
     position: fixed;
-    z-index: 10;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
@@ -148,13 +149,13 @@ a.modalBtn:hover {
     .modal__rightCol{
         width: 50%;
         .name{
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
             font-size: 1.2rem;
             font-weight: bold;
         }
         .text{
-            font-size: 0.8rem;            
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 2rem;
         }
     }
 }
@@ -166,13 +167,20 @@ a.modalBtn:hover {
     display: block;
     padding: 0.8rem;
     text-align: center;   
-    background: #222;
+    background: $color-black;
+    border: 1px solid $color-black;
     color: #fff;
     margin-bottom: 0.3rem;
     font-size: 0.8rem;
+    &:hover{
+        background: $color-white;        
+        color: $color-black;
+    }
 }
 .modal__rightBox{
     display: flex;
     flex-wrap: wrap ;
 justify-content: space-between;
 }
+
+

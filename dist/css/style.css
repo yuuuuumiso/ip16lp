@@ -393,7 +393,7 @@ a:active {
 
 /* area */
 
-#container {
+#l-container {
 	overflow-x: hidden;
 	position: relative;
 	z-index: 99;
@@ -404,7 +404,7 @@ a:active {
 }
 
 .scrollgress {
-	z-index: 20;
+	z-index: 999;
 }
 
 .c-btn {
@@ -1019,6 +1019,41 @@ a.modalBtn:hover {
 
 .is-sp {
 	display: block;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+.item__wrap {
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+.modal-content {
+	height: 90svh;
+	overflow-y: scroll;
+}
+
+.close {
+	top: -5px;
+}
+
+#modalContent {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+#modalContent .modal__leftCol {
+	width: 100%;
+	margin: 1.4rem auto 0;
+}
+
+#modalContent .modal__rightCol {
+	width: 100%;
 }
 
 }

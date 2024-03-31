@@ -2,7 +2,11 @@
 @use "../../global/mixin" as *;
 
 /* area */
-#container{
+// #container{
+//     position: relative;
+//     z-index: 99;
+// }
+#l-container{
     overflow-x: hidden;
     position: relative;
     z-index: 99;
@@ -13,7 +17,7 @@
 
 // bar
 .scrollgress {
-    z-index: 20;
+    z-index: 999;
 }
 
 // btn

@@ -28,6 +28,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
+        @include mq(sp) {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;            
+        }
     }
 }
 
@@ -55,6 +59,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    @include mq(sp) {
+        height: 90svh;
+        overflow-y:scroll;
+    }
 }
 
 /* 閉じるボタンのスタイリング */
@@ -66,6 +74,9 @@
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    @include mq(sp) {
+        top: -5px;        
+    }
 }
 
 .close:hover,
@@ -142,12 +153,22 @@ a.modalBtn:hover {
 #modalContent{
     display: flex;
     justify-content: center;
+    @include mq(sp) {
+        flex-direction: column;
+    }
     .modal__leftCol{
         margin: 0 1.5rem 0 0;
         width: 46%;
+        @include mq(sp) {
+            width: 100%;
+            margin: 1.4rem auto 0;
+        }
     }
     .modal__rightCol{
         width: 50%;
+        @include mq(sp) {
+            width: 100%;            
+        }
         .name{
             margin-bottom: 0.5rem;
             font-size: 1.2rem;

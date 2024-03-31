@@ -11,12 +11,20 @@
     width: 50px;
     height: 100vh;
     background: #222222;
+    @include mq(sp) {
+        height: 50px;
+        top: 15px;
+        right: 15px;
+    }
     &__inner{
         height: 100%;
         display: flex;
         flex-direction: column; /* 子要素を垂直に配置 */
         justify-content: space-between; /* 子要素を水平中央に配置 */
         align-items: center; /* 子要素を垂直中央に配置 */
+        @include mq(sp) {
+            height: inherit;
+        }
     }
 }
 .l-nav-btn{
@@ -27,6 +35,9 @@
     position: relative;
     z-index: 4;
     margin-top: 80px;
+    @include mq(sp) {
+        margin-top: 0px;
+    }
     span {
         display: inline-block;
         transition: all .4s;
@@ -39,15 +50,24 @@
         transform: translateX(-50%) translateY(-50%);
         &:nth-child(1){
             top: 40%;
+            @include mq(sp) {
+                top: 17px;
+            }
         }
         &:nth-child(2){
             top: 60%;
+            @include mq(sp) {
+                top: 34px;
+            }
         }
     }
     &.is-active{
         span {
-            top: 50%;            
-        }        
+            top: 50%;
+            @include mq(sp) {
+                top: 50%;
+            }
+        }
     }
 }
 .l-nav-lists{
@@ -56,6 +76,9 @@
     align-self: stretch;
     position: relative;
     z-index: 4;
+    @include mq(sp) {
+        display: none;
+    }
     li{
         margin-bottom: 10px;
         i{
@@ -77,6 +100,9 @@
     -webkit-transition: .5s;
     transition: .5s;
     background: #070707;
+    @include mq(sp) {
+        width: 100%;
+    }
 }
 .l-nav-global.is-active .l-nav-global__overlay{
     visibility: visible;
@@ -90,13 +116,19 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    width: 40svw;
+    width: 25svw;
     transform: translateX(100%);
     transition: .5s ease-in-out .3s;
     background: #222;
+    @include mq(sp) {
+        width: 80svw;
+    }
 }
 .l-nav-global.is-active .l-nav-global__contents{
     transform: translateX(-50px);
+    @include mq(sp) {
+        transform: translateX(0px);
+    }
 }
 .l-nav-global__list a{
 color: #fff;

@@ -42,11 +42,18 @@
         z-index: 1;
         position: fixed;
         width: 100%;
+        @include mq(sp) {
+            flex-direction: column-reverse;
+        }
     }
     &__lead{
      color:$color-white;
      font-size: 4vw;
      margin: -2vw 5vw 0 0vw;
+     @include mq(sp) {
+        width: 100vw;
+        margin: 0;
+    }
     }
     &__logo{
         font-size: 2vw;
@@ -56,6 +63,10 @@
         width: 48vw;
         margin: 0 -5vw 0 10vw;
         opacity: 0;
+        @include mq(sp) {
+            width: 100vw;
+            margin: 0;
+        }
     }
     &__ttl{
         line-height: 1.3;

@@ -210,7 +210,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	line-break: strict;
 	text-wrap: balance;
-	word-break: auto-phrase;
 	overflow-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
 	min-width: 320px;
@@ -250,6 +249,18 @@ a:hover,
 a:visited,
 a:active {
 	text-decoration: none;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #444;
 }
 
 .l-header {
@@ -387,7 +398,7 @@ a:active {
 .l-footer {
 	position: relative;
 	padding-block: 10vh;
-	background: #444;
+	background: #000;
 	z-index: 99;
 }
 
@@ -432,6 +443,18 @@ a:active {
 	width: fit-content;
 	font-family: "Oswald", sans-serif;
 	margin-bottom: 2.2rem;
+}
+
+.c-ttl--chara {
+	color: #ffffff;
+}
+
+.c-charaTtl {
+	text-align: center;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: clamp(1.125rem, 1.04rem + 0.18vw, 1.25rem);
+	margin-bottom: 1rem;
 }
 
 .page_top span {
@@ -724,7 +747,7 @@ body.appear .p-visual__img {
 	position: relative;
 	z-index: 10;
 	padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
-	width: calc(100vw - 50px);
+	width: calc(100% - 50px);
 }
 
 .p-about__inner {
@@ -779,8 +802,16 @@ body.appear .p-visual__img {
 	position: relative;
 	z-index: 5;
 	padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
-	width: calc(100vw - 50px);
+	width: calc(100% - 50px);
 	overflow: hidden;
+}
+
+.item--chara {
+	background: #434343;
+}
+
+.item--chara:before {
+	display: none;
 }
 
 .item:before {
@@ -798,6 +829,10 @@ body.appear .p-visual__img {
 	pointer-events: none;
 }
 
+.item__blk {
+	margin-bottom: 80px;
+}
+
 .item__inner {
 	max-width: 1200px;
 	margin-inline: auto;
@@ -809,6 +844,16 @@ body.appear .p-visual__img {
 	-ms-grid-columns: 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
+}
+
+.item__wrap--single {
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+
+.item__box {
+	margin-bottom: 3rem;
 }
 
 /* モーダルのスタイリング */
@@ -898,6 +943,10 @@ a.modalBtn:hover {
 
 .col__img {
 	margin-bottom: 5px;
+	width: 100%;
+}
+
+.col__img img {
 	width: 100%;
 }
 
@@ -1105,7 +1154,7 @@ a.modalBtn:hover {
 }
 
 .item {
-	width: 100vw;
+	width: 100%;
 }
 
 .item__wrap {

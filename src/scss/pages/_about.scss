@@ -6,7 +6,7 @@
   position: relative;
   z-index: 10;
   padding: 50px clamp(1rem, 0.417rem + 1.22vw, 1.875rem);
-  width: calc(100vw - 50px);
+  width: calc(100% - 50px);
   @include mq(sp) {
     width:100vw;
   }

@@ -41,6 +41,16 @@
     width: fit-content;
     font-family: "Oswald", sans-serif;
     margin-bottom: 2.2rem;
+    &--chara{
+        color: $color-white;
+    }
+}
+.c-charaTtl{
+    text-align: center;
+    color: $color-white;
+    font-weight: normal;
+    font-size: clamp(1.125rem, 1.04rem + 0.18vw, 1.25rem);
+    margin-bottom: 1rem;
 }
 
 // 

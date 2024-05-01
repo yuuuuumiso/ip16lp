@@ -1,4 +1,42 @@
 
+//パララックス
+window.addEventListener('scroll', () => {
+	const visualInner = document.querySelector('.p-visual__inner');
+	const scrollPosition = window.pageYOffset;
+	visualInner.style.transform = `translateY(${scrollPosition * -0.4}px)`;
+});
+
+
+
+/*===========================================================*/
+/*  印象編 8-6 アルファベットがランダムに変化して出現*/
+/*===========================================================*/
+var arr = []
+//初期値の設定
+function TypingInit() {
+	$('.js_typing').each(function (i) { //js_typingクラスを全て処理をおこなう
+		arr[i] = new ShuffleText(this);//動作させるテキストを配列に格納
+	});
+}
+//スクロールした際のアニメーションの設定
+function TypingAnime() {
+	$(".js_typing").each(function (i) {
+		var elemPos = $(this).offset().top - 50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight) {
+			if(!$(this).hasClass("endAnime")){//endAnimeのクラスがあるかチェック
+				arr[i].start();//配列で登録テキストのアニメーションをおこなう
+				arr[i].duration = 600;//テキストが最終変化するまでの時間※規定値600
+				$(this).addClass("endAnime");//１度アニメーションした場合はendAnimeクラスを追加
+			}
+		}else{
+			$(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
+		}
+	});
+}
+
+
 /*===========================================================*/
 /*機能編  9-1-5 スクロールをするとエリアの高さに合わせて線が伸びる*/
 /*===========================================================*/
@@ -252,33 +290,6 @@ function fadeAnime(){
 	});  
 }
 
-/*===========================================================*/
-/*  印象編 8-6 アルファベットがランダムに変化して出現*/
-/*===========================================================*/
-var arr = []
-//初期値の設定
-function TypingInit() {
-	$('.js_typing').each(function (i) { //js_typingクラスを全て処理をおこなう
-		arr[i] = new ShuffleText(this);//動作させるテキストを配列に格納
-	});
-}
-//スクロールした際のアニメーションの設定
-function TypingAnime() {
-	$(".js_typing").each(function (i) {
-		var elemPos = $(this).offset().top - 50;//要素より、50px上の
-		var scroll = $(window).scrollTop();
-		var windowHeight = $(window).height();
-		if (scroll >= elemPos - windowHeight) {
-			if(!$(this).hasClass("endAnime")){//endAnimeのクラスがあるかチェック
-				arr[i].start();//配列で登録テキストのアニメーションをおこなう
-				arr[i].duration = 800;//テキストが最終変化するまでの時間※規定値600
-				$(this).addClass("endAnime");//１度アニメーションした場合はendAnimeクラスを追加
-			}
-		}else{
-			$(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
-		}
-	});
-}
 
 /*===========================================================*/
 /* 関数をまとめる */
@@ -295,8 +306,8 @@ $(window).scroll(function () {
 	// FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
 	// setFadeElement();// 機能編 8-1-4 ページの指定の範囲内で出現（右から左）の関数を呼ぶ
     fadeAnime();// 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
-	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
-	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
+//	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
+//	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述

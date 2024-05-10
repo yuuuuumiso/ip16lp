@@ -16,7 +16,7 @@ font-size: 62.5%;/*デフォルト10px*/
 -webkit-font-smoothing: antialiased;// macOSでフォントを滑らかに
 -moz-osx-font-smoothing: grayscale;// macOSでフォントを滑らかに
 line-break: strict;//句読点や記号を用いた場合の改行ルールを指定。strictは記号が先頭に来なくなる。日本語、中国語、韓国語など東洋の文字で機能します。
-text-wrap: balance;//テキストが複数行のときに、行ごとの文字数を同じにしてバランスを自動調整
+//text-wrap: balance;//テキストが複数行のときに、行ごとの文字数を同じにしてバランスを自動調整
 //word-break: auto-phrase;//英語対策：表示範囲の最後に来たとき、単語が長くても短くても、途中で改行させるかどうか指定する
 overflow-wrap: break-word;//英語対策：表示範囲に収まらない長い単語を途中で改行させるかどうかを指定する（旧：word-wrap）
 -webkit-text-size-adjust: 100%; //スマホ横向き対策

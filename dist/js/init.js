@@ -4,7 +4,7 @@
 window.addEventListener('scroll', function () {
   var visualInner = document.querySelector('.p-visual__inner');
   var scrollPosition = window.pageYOffset;
-  visualInner.style.transform = "translateY(".concat(scrollPosition * -0.4, "px)");
+  visualInner.style.transform = "translateY(".concat(scrollPosition * -0.5, "px)");
 });
 
 /*===========================================================*/

@@ -22,11 +22,13 @@
 
 // btn
 .c-btn{
-    font-size: 2vw;
+    font-size: clamp(1.25rem, 1.083rem + 0.35vw, 1.5rem);
     display: block;
     background: $color-main;
     color: $color-white;
     text-align: center;
+    border: 2px solid $color-main;
+    padding: 0.5rem 0;
     &:hover{
         background: $color-white;
         color: $color-main;
@@ -39,7 +41,7 @@
     line-height: 1.4;
     font-size: clamp(1.25rem, -0.528rem + 3.7vw, 2.25rem);
     width: fit-content;
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald","Noto Sans JP";
     margin-bottom: 2.2rem;
     &--chara{
         color: $color-white;

@@ -6,8 +6,10 @@
     height: 100svh;
     position: relative;
     font-family: 'Oswald', sans-serif;
-    overflow: hidden;
-    // width: calc(100vw - 50px);
+//    overflow: hidden;
+    @include mq(sp) {
+//        overflow:visible;
+    }
     &:before{
     content: "";
     background-color: #d11616;
@@ -19,7 +21,15 @@
     transform: rotate(10deg);
     clip-path: inset(0 0 100% 0);
     transition: clip-path 0.4s ease;
+    @include mq(sp) {
+        transform: skewX(40deg);
+        top: 0;
+        left: -188%;
+        width: 260%;
+        height: 100%;
+        position: absolute;
     }
+}
     &:after{
         content: "";
         background-color: #111;
@@ -32,6 +42,19 @@
         clip-path: inset(0 0 100% 0);//初期設定
         clip-path: inset(0);//アニメーション後
         transition: clip-path 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
+        @include mq(sp) {
+            // width: 250%;
+            // height: 250%;
+            // left: -38%;
+            //  top: 7%;
+            // transform: rotate(130deg);
+            transform: skewX(40deg);
+            top: 0;
+            left: -190%;
+            width: 260%;
+            height: 100%;
+            position: absolute;
+        }
     }
     &__inner{
         display: flex;
@@ -44,37 +67,52 @@
         width: 100%;
         @include mq(sp) {
             flex-direction: column-reverse;
+            position: absolute;
         }
     }
     &__lead{
-     margin: -3vw 0vw 0 0vw;
+        margin: -3% 2% 0 3%;
      color:$color-white;
      @include mq(sp) {
         width: 100vw;
         margin: 0;
+        text-align: center;
      }
     }
     &__logo{
         font-size: 2.6vw;
         margin-bottom: 1vw;
+        @include mq(sp) {
+            font-size: 7vw;            
+        }
     }
     &__img{
-        width: 48vw;
-        margin: 0 -10vw 0 15vw;
+        width: 42vw;
+        margin: 0 0% 0 9%;
         opacity: 0;
+        img{
+            width: 100%;
+        }
         @include mq(sp) {
             width: 100vw;
             margin: 0;
+            margin-bottom: -8vw;
       }
     }
     &__ttl{
         line-height: 1.3;
-        // margin-bottom: 2.2vw;
         font-size: 4.8vw;
+        @include mq(sp) {
+            font-size: 11vw;            
+        }
         &Acc{
             display: block;
             letter-spacing: 0.8em;
             font-size: 0.5em;
+            @include mq(sp) {
+                letter-spacing: 0.7em;
+                font-size: 0.4em;
+            }
         }
     }
 }
@@ -97,6 +135,10 @@ body.appear{
     bottom: 3%;
     height: 50px;
     z-index: 2;
+    @include mq(sp) {
+        left: 20px;
+        display: none;
+    }
 }
 
 .scrolldown1 span {
@@ -108,6 +150,9 @@ body.appear{
     text-transform: uppercase;
     left: -20px;
     top: -32px;
+    @include mq(sp) {
+        left: -19px;        
+    }
 }
 .scrolldown1::after {
     content: "";

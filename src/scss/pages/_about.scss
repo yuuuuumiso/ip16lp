@@ -9,6 +9,7 @@
   width: calc(100% - 50px);
   @include mq(sp) {
     width:100vw;
+    padding: 3rem 1rem;
   }
   &__inner {
     max-width: 1200px;
@@ -36,13 +37,14 @@
     animation: loop 50s linear infinite;
   }
   &__img {
-    width: 42%;
+    width: 50%;
     @include mq(sp) {
-      width: 100%;
+      width: 90%;
+      margin-bottom: 1rem;
   }
   }
   &__box {
-    width: 42%;
+    width: 50%;
     @include mq(sp) {
       width: 100%;
   }

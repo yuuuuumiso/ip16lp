@@ -5,7 +5,15 @@
 .l-footer{
 position: relative;
 padding-block: 10vh;
-background: #000;
+background: $color-black;
 z-index: 99;
+border-top: 6px solid $color-main;
+text-align: center;
+&__link{
+    display: block;
+    @include mq(sp) {
+        width: 120px;
+        margin: auto;
+    }
+  }
 }
-

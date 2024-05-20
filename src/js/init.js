@@ -1,9 +1,26 @@
 
-//パララックス
+
+//scroll_effect
+$(window).scroll(function () {
+	var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+	var scrollAnimationFunc = function scrollAnimationFunc() {
+	  for (var i = 0; i < scrollAnimationElm.length; i++) {
+		var triggerMargin = window.innerHeight * 0.2; 
+		if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+		  scrollAnimationElm[i].classList.add('on');
+		}
+	  }
+	};
+	window.addEventListener('load', scrollAnimationFunc);
+	window.addEventListener('scroll', scrollAnimationFunc);
+  });
+
+
+//mv パララックス
 window.addEventListener('scroll', () => {
 	const visualInner = document.querySelector('.p-visual__inner');
 	const scrollPosition = window.pageYOffset;
-	visualInner.style.transform = `translateY(${scrollPosition * -0.4}px)`;
+	visualInner.style.transform = `translateY(${scrollPosition * -0.2 }px)`;
 });
 
 
@@ -27,11 +44,11 @@ function TypingAnime() {
 		if (scroll >= elemPos - windowHeight) {
 			if(!$(this).hasClass("endAnime")){//endAnimeのクラスがあるかチェック
 				arr[i].start();//配列で登録テキストのアニメーションをおこなう
-				arr[i].duration = 600;//テキストが最終変化するまでの時間※規定値600
+				arr[i].duration = 700;//テキストが最終変化するまでの時間※規定値600
 				$(this).addClass("endAnime");//１度アニメーションした場合はendAnimeクラスを追加
 			}
 		}else{
-			$(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
+			//$(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
 		}
 	});
 }
@@ -204,20 +221,20 @@ $('.tab a').on('click', function() {
 
 //画像の設定
 
-var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-		if (windowwidth > 768){
-			var responsiveImage = [//PC用の画像
-				{ src: './img/main_01.jpg'},
-				{ src: './img/main_02.jpg'},
-				{ src: './img/main_03.jpg'}
-			];
-		} else {
-			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: './img/main_01_sp.jpg' },
-				{ src: './img/main_02_sp.jpg' },
-				{ src: './img/main_03_sp.jpg' }
-			];
-		}
+// var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+// 		if (windowwidth > 768){
+// 			var responsiveImage = [//PC用の画像
+// 				{ src: './img/main_01.jpg'},
+// 				{ src: './img/main_02.jpg'},
+// 				{ src: './img/main_03.jpg'}
+// 			];
+// 		} else {
+// 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
+// 				{ src: './img/main_01_sp.jpg' },
+// 				{ src: './img/main_02_sp.jpg' },
+// 				{ src: './img/main_03_sp.jpg' }
+// 			];
+// 		}
 
 //Vegas全体の設定
 
@@ -306,8 +323,8 @@ $(window).scroll(function () {
 	// FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
 	// setFadeElement();// 機能編 8-1-4 ページの指定の範囲内で出現（右から左）の関数を呼ぶ
     fadeAnime();// 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
-//	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
-//	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
+	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
+	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
@@ -447,8 +464,9 @@ $(document).ready(function(){
 });
 
 
-$(".l-nav-btn").click(function () {//ボタンがクリックされたら
-	$(this).toggleClass('is-active');//ボタン自身に activeクラスを付与し
-    $(".l-nav-global").toggleClass('is-active');//ナビゲーションにpanelactiveクラスを付与
-});
-
+//menu
+$(".l-nav-btn, .l-nav-global__overlay, .l-nav-global__list a").click(function () {
+	$(".l-nav-btn").toggleClass('is-active');
+	$(".l-nav-global").toggleClass('is-active');
+  });
+  

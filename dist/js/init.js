@@ -1,10 +1,25 @@
 "use strict";
 
-//パララックス
+//scroll_effect
+$(window).scroll(function () {
+  var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+  var scrollAnimationFunc = function scrollAnimationFunc() {
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = window.innerHeight * 0.2;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add('on');
+      }
+    }
+  };
+  window.addEventListener('load', scrollAnimationFunc);
+  window.addEventListener('scroll', scrollAnimationFunc);
+});
+
+//mv パララックス
 window.addEventListener('scroll', function () {
   var visualInner = document.querySelector('.p-visual__inner');
   var scrollPosition = window.pageYOffset;
-  visualInner.style.transform = "translateY(".concat(scrollPosition * -0.5, "px)");
+  visualInner.style.transform = "translateY(".concat(scrollPosition * -0.2, "px)");
 });
 
 /*===========================================================*/
@@ -28,11 +43,11 @@ function TypingAnime() {
       if (!$(this).hasClass("endAnime")) {
         //endAnimeのクラスがあるかチェック
         arr[i].start(); //配列で登録テキストのアニメーションをおこなう
-        arr[i].duration = 600; //テキストが最終変化するまでの時間※規定値600
+        arr[i].duration = 700; //テキストが最終変化するまでの時間※規定値600
         $(this).addClass("endAnime"); //１度アニメーションした場合はendAnimeクラスを追加
       }
     } else {
-      $(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
+      //$(this).removeClass("endAnime"); //範囲外にスクロールした場合はendAnimeのクラスを削除
     }
   });
 }
@@ -105,17 +120,17 @@ function mediaQueriesWin() {
 /* 機能編 5-1-11 クリックしたらナビが上から下に出現 */
 /*===========================================================*/
 
-$(".g-nav-openbtn").click(function () {
-  //ボタンがクリックされたら
-  $(this).toggleClass('active'); //ボタン自身に activeクラスを付与し
-  $("#g-nav").toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
-});
+// $(".g-nav-openbtn").click(function () {
+//   //ボタンがクリックされたら
+//   $(this).toggleClass('active'); //ボタン自身に activeクラスを付与し
+//   $("#g-nav").toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
+// });
 
-$("#g-nav a").click(function () {
-  //ナビゲーションのリンクがクリックされたら
-  $(".g-nav-openbtn").removeClass('active'); //ボタンの activeクラスを除去し
-  $("#g-nav").removeClass('panelactive'); //ナビゲーションのpanelactiveクラスも除去
-});
+// $("#g-nav a").click(function () {
+//   //ナビゲーションのリンクがクリックされたら
+//   $(".g-nav-openbtn").removeClass('active'); //ボタンの activeクラスを除去し
+//   $("#g-nav").removeClass('panelactive'); //ナビゲーションのpanelactiveクラスも除去
+// });
 
 /*===========================================================*/
 /*機能編 8-1-4 ページの指定の範囲内で出現（右から左）*/
@@ -165,46 +180,46 @@ $("#g-nav a").click(function () {
 /*===========================================================*/
 
 //任意のタブにURLからリンクするための設定
-function GethashID(hashIDName) {
-  if (hashIDName) {
-    //タブ設定
-    $('.tab li').find('a').each(function () {
-      //タブ内のaタグ全てを取得
-      var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
-      if (idName == hashIDName) {
-        //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
-        var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
-        $('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
-        $(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
-        //表示させるエリア設定
-        $(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-        $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
-      }
-    });
-  }
-}
+// function GethashID(hashIDName) {
+//   if (hashIDName) {
+//     //タブ設定
+//     $('.tab li').find('a').each(function () {
+//       //タブ内のaタグ全てを取得
+//       var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
+//       if (idName == hashIDName) {
+//         //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+//         var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+//         $('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
+//         $(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+//         //表示させるエリア設定
+//         $(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+//         $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
+//       }
+//     });
+//   }
+// }
 
 //タブをクリックしたら
-$('.tab a').on('click', function () {
-  var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-  GethashID(idName); //設定したタブの読み込みと
-  return false; //aタグを無効にする
-});
+// $('.tab a').on('click', function () {
+//   var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+//   GethashID(idName); //設定したタブの読み込みと
+//   return false; //aタグを無効にする
+// });
 
 // 上記の動きをページが読み込まれたらすぐに動かす
-$(window).on('load', function () {
-  $('.tab li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
-  $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
-  var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-  GethashID(hashName); //設定したタブの読み込み
-});
+// $(window).on('load', function () {
+//   $('.tab li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+//   $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+//   var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+//   GethashID(hashName); //設定したタブの読み込み
+// });
 
 //タブをクリックしたら
-$('.tab a').on('click', function () {
-  var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-  GethashID(idName); //設定したタブの読み込みと
-  return false; //aタグを無効にする
-});
+// $('.tab a').on('click', function () {
+//   var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+//   GethashID(idName); //設定したタブの読み込みと
+//   return false; //aタグを無効にする
+// });
 
 /*===========================================================*/
 /* 機能編 6-1-4 動きを組み合わせて全画面で見せる*/
@@ -212,28 +227,20 @@ $('.tab a').on('click', function () {
 
 //画像の設定
 
-var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-if (windowwidth > 768) {
-  var responsiveImage = [
-  //PC用の画像
-  {
-    src: './img/main_01.jpg'
-  }, {
-    src: './img/main_02.jpg'
-  }, {
-    src: './img/main_03.jpg'
-  }];
-} else {
-  var responsiveImage = [
-  //タブレットサイズ（768px）以下用の画像
-  {
-    src: './img/main_01_sp.jpg'
-  }, {
-    src: './img/main_02_sp.jpg'
-  }, {
-    src: './img/main_03_sp.jpg'
-  }];
-}
+// var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+// 		if (windowwidth > 768){
+// 			var responsiveImage = [//PC用の画像
+// 				{ src: './img/main_01.jpg'},
+// 				{ src: './img/main_02.jpg'},
+// 				{ src: './img/main_03.jpg'}
+// 			];
+// 		} else {
+// 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
+// 				{ src: './img/main_01_sp.jpg' },
+// 				{ src: './img/main_02_sp.jpg' },
+// 				{ src: './img/main_03_sp.jpg' }
+// 			];
+// 		}
 
 //Vegas全体の設定
 
@@ -242,88 +249,88 @@ if (windowwidth > 768) {
 /*===========================================================*/
 
 //開くボタンを押した時には
-$(".open-btn").click(function () {
-  $("#search-wrap").addClass('panelactive'); //#search-wrapへpanelactiveクラスを付与
-  $('#search-text').focus(); //テキスト入力のinputにフォーカス
-});
+// $(".open-btn").click(function () {
+//   $("#search-wrap").addClass('panelactive'); //#search-wrapへpanelactiveクラスを付与
+//   $('#search-text').focus(); //テキスト入力のinputにフォーカス
+// });
 
-//閉じるボタンを押した時には
-$(".close-btn").click(function () {
-  $("#search-wrap").removeClass('panelactive'); //#search-wrapからpanelactiveクラスを除去
-});
+// //閉じるボタンを押した時には
+// $(".close-btn").click(function () {
+//   $("#search-wrap").removeClass('panelactive'); //#search-wrapからpanelactiveクラスを除去
+// });
 
 /*===========================================================*/
 /* 印象編 4 最低限おぼえておきたい動き */
 /*===========================================================*/
 
 // 動きのきっかけの起点となるアニメーションの名前を定義
-function fadeAnime() {
-  // 印象編 4-9、4-10 背景色が伸びて出現（左から・右から）中の要素が出現
-  $('.bgappearTrigger').each(function () {
-    //bgappearTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('bgappear'); // 画面内に入ったらbgappearというクラス名を追記
-    } else {
-      $(this).removeClass('bgappear'); // 画面外に出たらbgappearというクラス名を外す
-    }
-  });
-  //印象編 4-9 背景色が伸びて出現（左から）
-  $('.bgLRextendTrigger').each(function () {
-    //bgLRextendTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('bgLRextend'); // 画面内に入ったらbgLRextendというクラス名を追記
-    } else {
-      $(this).removeClass('bgLRextend'); // 画面外に出たらbgLRextendというクラス名を外す
-    }
-  });
-  //印象編 4-9 背景色が伸びて出現（右から）
-  $('.bgRLextendTrigger').each(function () {
-    //bgRLextendTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('bgRLextend'); // 画面内に入ったらbgRLextendというクラス名を追記
-    } else {
-      $(this).removeClass('bgRLextend'); // 画面外に出たらbgRLextendというクラス名を外す
-    }
-  });
-  //service-areaスタート
-  $('.service-area').each(function () {
-    //service-areaというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('startwd'); // 画面内に入ったらstartwdというクラス名を追記
-    } else {
-      $(this).removeClass('startwd'); // 画面外に出たらstartwdというクラス名を外す
-    }
-  });
-}
+// function fadeAnime() {
+//   // 印象編 4-9、4-10 背景色が伸びて出現（左から・右から）中の要素が出現
+//   $('.bgappearTrigger').each(function () {
+//     //bgappearTriggerというクラス名が
+//     var elemPos = $(this).offset().top - 50; //要素より、50px上の
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll >= elemPos - windowHeight) {
+//       $(this).addClass('bgappear'); // 画面内に入ったらbgappearというクラス名を追記
+//     } else {
+//       $(this).removeClass('bgappear'); // 画面外に出たらbgappearというクラス名を外す
+//     }
+//   });
+//   //印象編 4-9 背景色が伸びて出現（左から）
+//   $('.bgLRextendTrigger').each(function () {
+//     //bgLRextendTriggerというクラス名が
+//     var elemPos = $(this).offset().top - 50; //要素より、50px上の
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll >= elemPos - windowHeight) {
+//       $(this).addClass('bgLRextend'); // 画面内に入ったらbgLRextendというクラス名を追記
+//     } else {
+//       $(this).removeClass('bgLRextend'); // 画面外に出たらbgLRextendというクラス名を外す
+//     }
+//   });
+//   //印象編 4-9 背景色が伸びて出現（右から）
+//   $('.bgRLextendTrigger').each(function () {
+//     //bgRLextendTriggerというクラス名が
+//     var elemPos = $(this).offset().top - 50; //要素より、50px上の
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll >= elemPos - windowHeight) {
+//       $(this).addClass('bgRLextend'); // 画面内に入ったらbgRLextendというクラス名を追記
+//     } else {
+//       $(this).removeClass('bgRLextend'); // 画面外に出たらbgRLextendというクラス名を外す
+//     }
+//   });
+//   //service-areaスタート
+//   $('.service-area').each(function () {
+//     //service-areaというクラス名が
+//     var elemPos = $(this).offset().top - 50; //要素より、50px上の
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll >= elemPos - windowHeight) {
+//       $(this).addClass('startwd'); // 画面内に入ったらstartwdというクラス名を追記
+//     } else {
+//       $(this).removeClass('startwd'); // 画面外に出たらstartwdというクラス名を外す
+//     }
+//   });
+// }
 
 /*===========================================================*/
 /* 関数をまとめる */
 /*===========================================================*/
 
 // ページがリサイズされたら動かしたい場合の記述
-$(window).resize(function () {
-  mediaQueriesWin(); // 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
-});
+// $(window).resize(function () {
+//   mediaQueriesWin(); // 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
+// });
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
   // FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
   // setFadeElement();// 機能編 8-1-4 ページの指定の範囲内で出現（右から左）の関数を呼ぶ
-  fadeAnime(); // 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
-  //	TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
-  //	TypingAnime();// 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
+  //fadeAnime(); // 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
+  TypingInit(); // 印象編 8-6 アルファベットがランダムに変化して出現 初期設定
+  TypingAnime(); // 印象編 8-6 アルファベットがランダムに変化して出現の関数を呼ぶ
 });
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
@@ -334,13 +341,13 @@ $(window).on('load', function () {
   $("#splash").delay(1500).fadeOut('slow', function () {
     $('body').addClass('appear'); //フェードアウト後bodyにappearクラス付与 
 
-    mediaQueriesWin(); // 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
+//    mediaQueriesWin(); // 機能編 5-1-1 ドロップダウンメニュー（上）の関数を呼ぶ
     // FixedAnime();// 機能編 5-1-6 スクロール途中から上部固定
     //setFadeElement();// 機能編 8-1-4  ページトップリンク:ページの指定の範囲内で出現（右から左）の関数を呼ぶ
 
     /*機能編 5-4-1タブメニューの読み込み*/
-    var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-    GethashID(hashName); //設定したタブの読み込み   
+//    var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+//    GethashID(hashName); //設定したタブの読み込み   
   });
   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
 
@@ -351,7 +358,7 @@ $(window).on('load', function () {
   //=====ここから背景が伸びた後に動かしたいJSをまとめる
   $('.splashbg').on('animationend', function () {
     /* 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ*/
-    fadeAnime();
+//    fadeAnime();
     // 印象編 8-6 アルファベットがランダムに変化して出現 
     $(".endAnime").removeClass("endAnime");
     TypingInit(); //印象編 8-6 アルファベットがランダムに変化して出現 初期設定
@@ -363,9 +370,7 @@ $(window).on('load', function () {
 $(document).ready(function () {
   // モーダルの表示
   $(".modalBtn").click(function () {
-    //alert();
     var index = $(this).data("index");
-    //$("#modal").css("display", "block");
     $("#modal").fadeIn(200);
     // body要素にoverflow:hiddenを設定してスクロールを禁止
     $("body").css("overflow", "hidden");
@@ -382,25 +387,22 @@ $(document).ready(function () {
   // モーダルの背景をクリックしてモーダルを閉じる
   $("#modal").click(function (event) {
     if (event.target.id === "modal") {
-      //            $("#modal").css("display", "none");
       $("#modal").fadeOut(200);
-      // body要素のoverflow:hiddenを解除してスクロールを許可
       $("body").css("overflow", "auto");
     }
   });
 
   // 閉じるボタンがクリックされたときの処理
   $(".close").click(function () {
-    //$("#modal").css("display", "none");
     $("#modal").fadeOut(200);
-    // body要素のoverflow:hiddenを解除してスクロールを許可
     $("body").css("overflow", "auto");
   });
 
   // モーダルの内容を表示
   function displayModalContent(data) {
     $(".name").text(data.name);
-    $(".text").text(data.text);
+//    $(".text").text(data.text);これだとbrがタグとして読まれない
+    $(".text").html(data.text); // .text() を .html() に変更
     $(".modal__img").attr("src", data.src);
     // JSONデータが存在する場合のみ該当する要素を表示
     if (data.model1) {
@@ -421,9 +423,10 @@ $(document).ready(function () {
     }
   }
 });
-$(".l-nav-btn").click(function () {
-  //ボタンがクリックされたら
-  $(this).toggleClass('is-active'); //ボタン自身に activeクラスを付与し
-  $(".l-nav-global").toggleClass('is-active'); //ナビゲーションにpanelactiveクラスを付与
+
+//menu
+$(".l-nav-btn, .l-nav-global__overlay, .l-nav-global__list a").click(function () {
+  $(".l-nav-btn").toggleClass('is-active');
+  $(".l-nav-global").toggleClass('is-active');
 });
 //# sourceMappingURL=map/init.js.map

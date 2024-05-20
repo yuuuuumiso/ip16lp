@@ -1,239 +1,211 @@
 [{
-  "name": "ガラスケース",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "フリップカバー",
+  "text": "上質なPUレザー素材を使用したフリップカバーです。<br><br>特許取得済みのマグネットロックで、ラクラクカバーを開閉する事が可能。便利な横スタンド機能で動画の視聴をお楽しみ頂けます。<br><br>通勤通学やお買い物に便利な2つのカードポケット・ショルダーストラップを取り付けするのにも最適なストラップホール付き。",
+  "src": "./img/item_img01.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/fp01_04/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/fp01_04/"
   },
   "model3": {
     "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/fp01_03/"
   },
   "model4": {
     "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/fp01_03/"
   }
 }, {
-  "name": "Alice2",
-  "text": "紹介文",
-  "src": "Los Angeles",
+  "name": "ガラスフリップケース",
+  "text": "オリジナリティと機能性を追求したガラスフリップケースです。<br><br>ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。<br><br>背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "./img/item_img02.jpg",
   "model1": {
-    "name": "22222iPhone 15 Pro",
-    "link": "https://example.com/22222iphone15pro"
+    "name": "iPhone 15",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/gf01_08/"
   },
   "model2": {
-    "name": "22222iPhone 15 Plus",
-    "link": "https://example.com/22222iphone15plus"
+    "name": "iPhone 15 Pro",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/gf01_08/"
   },
   "model3": {
-    "name": "22222iPhone 15 Pro Max",
-    "link": "https://example.com/22222iphone15promax"
+    "name": "iPhone 15 Plus",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/gf01_02/"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/gf01_02/"
   }
 }, {
-  "name": "Bob3",
-  "text": "紹介文",
-  "src": "Chicago",
+  "name": "クリアタフケース",
+  "text": "MagSafe充電器に対応した極薄パネル採用のクリアタフケースです。<br><br>ケース四つ角には、ストラップホールをお好みの位置に変更出来るリングパーツ式を採用し、お手持ちのショルダーストラップ・ハンドストラップ等を自由に取り付けが可能です。<br><br>ケース内側はエアークッションを採用した耐衝撃設計です。",
+  "src": "./img/item_img03.jpg",
   "model1": {
-    "name": "3333iPhone 15 Plus",
-    "link": "https://example.com/3333iphone15plus"
+    "name": "iPhone 15",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pt01_05/"
   },
   "model2": {
-    "name": "3333iPhone 15 Pro Max",
-    "link": "https://example.com/3333iphone15promax"
+    "name": "iPhone 15 Pro",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/pt01_05/"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/pt01_02/"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/pt01_02/"
   }
 }, {
-  "name": "Eva4",
-  "text": "紹介文",
-  "src": "San Francisco",
+  "name": "クリアハイブリッドケース",
+  "text": "持ち運びに便利なショルダーストラップやハンドストラップを取り付けられるショルダーストラップホール付クリアハイブリッドケースです。<br><br>クリアデザインでiPhone本体の美しさを最大限に活かします。耐久性のあるポリカーボネイトとしなやかなTPUを組み合わせたハイブリッド設計で端末本体をしっかり保護します。",
+  "src": "./img/item_img04.jpg",
   "model1": {
-    "name": "44444iPhone 15",
-    "link": "https://example.com/44444iphone15"
+    "name": "iPhone 15",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pt06_09/"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/pt06_09/"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/pt04_05/"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/pt04_05/"
   }
 }, {
-  "name": "Michael5",
-  "text": "紹介文",
-  "src": "Houston",
-  "model1": {
-    "name": "55555iPhone 15 Pro",
-    "link": "https://example.com/55555iphone15pro"
-  },
-  "model2": {
-    "name": "55555iPhone 15 Plus",
-    "link": "https://example.com/55555iphone15plus"
-  },
-  "model3": {
-    "name": "55555iPhone 15 Pro Max",
-    "link": "https://example.com/55555iphone15promax"
-  }
-},{
-  "name": "ガラスケース6",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "グラデーションハイブリッドケース",
+  "text": "グラデーションカラーがiPhone本体を一段とオシャレに魅せるグラデーションケースです。<br><br>耐久性のあるポリカーボネイトとしなやかなTPUを組み合わせたハイブリッド設計で端末本体をしっかり保護します。<br><br>お手持ちのストラップをつけて落下を防げるストラップホール付き。",
+  "src": "./img/item_img05.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pt10_13/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/pt10_13/"
   },
   "model3": {
     "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/pt03/"
   },
   "model4": {
     "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/pt03/"
   }
 },{
-  "name": "ガラスケース7",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "エアクッションケース",
+  "text": "耐衝撃性能に特化したエアークッションケースです。<br><br>ケース周囲をエアークッション機構でしっかりガードし落下や衝撃からiPhone本体を守ります。米国国防総省の軍用規格(MIL-STD-810G)の落下と振動試験をクリアしたタフ設計。<br><br>薄くて耐久性に優れたポリカーボネイトと手によくなじむTPU素材を使用したハイブリッド構造で端末本体をしっかり保護します。",
+  "src": "./img/item_img06.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pt14/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/pt14/"
   }
 },{
-  "name": "ガラスケース8",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "バックフリップケース",
+  "text": "手帳型ならではの煩わしいカバーの開け閉めを解消する為、フリップを背面に移動したバックフリップケースです。<br><br>ケース背面は、クリアデザインなのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。<br><br>背面のフリップ部は上質なPUレザーを使用し、通勤通学やお買い物に便利なカードポケットが付いています。",
+  "src": "./img/item_img07.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/bf03-05/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/bf03-05/"
   }
 },{
-  "name": "ガラスケース9",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "PUレザーケース",
+  "text": "上質なPUレザー素材を使用したPUレザーケースです。<br><br>ケース外側は高級感のあるPUレザーを使用し、手触りがよく、汚れにも強い。ケース内側は硬くて耐久性に優れたポリカーボネイトを使用し、端末本体をキズや衝撃から守ります。<br><br>ショルダーストラップを取り付けするのにも最適なカラビナフック付き。",
+  "src": "./img/item_img08.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pu01_02/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/pu01_02/"
   }
 },{
-  "name": "ガラスケース10",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "ソフトバンパーケース",
+  "text": "iPhone本体の美しさを活かすシンプルデザインなバンパーです。<br><br>各種コネクターやボタン周りまでバンパーがしっかり覆う為、安心して使用頂けます。",
+  "src": "./img/item_img09.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/bp01_02/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/bp01_02/"
   }
 },{
-  "name": "ガラスケース11",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "クリアポケットケース",
+  "text": "写真やステッカーを背面のポケットに入れてアレンジが可能なポケット付ソフトケースです。<br><br>背面のクリアポケットにお気に入りの写真やステッカーを入れて自由にカスタマイズしたり、普段使用するカードを収納する事も可能です。<br><br>TPU素材を使用しており、しなやかで柔軟性に優れ、端末本体をキズや衝撃から守ります。",
+  "src": "./img/item_img10.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/ctp01_02/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/ctp01_02/"
   }
 },{
-  "name": "ガラスケース12",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "クリアソフトケース",
+  "text": "iPhone本体の美しさを最大限に活かすクリアタイプのソフトケースです。<br><br>しなやかで柔軟性に優れたTPU素材で端末本体をキズや衝撃から守ります。ケースと本体の貼り付きを防止するため、ケース内側にマイクロドット加工を施しています。<br><br>お手持ちのストラップを付けて落下を防止できるストラップホール付き。",
+  "src": "./img/item_img11.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/tp01_04/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/tp01_04/"
   },
   "model3": {
     "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23c/tp01_02/"
   },
   "model4": {
     "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23d/tp01_02/"
   }
 },{
-  "name": "ガラスケース13",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "メタリックフレーム クリアケース",
+  "text": "上品な輝きを放つ高級感あるメタリックフレームを採用したクリアケースです。<br><br>ケース背面は透明なクリアデザインでiPhone本体の美しさを最大限に活かします。ケースと本体の貼り付きを防止するため、ケース内側にマイクロドット加工を施しています。<br><br>しなやかで柔軟性に優れたTPU素材で端末本体をキズや衝撃から守ります。",
+  "src": "./img/item_img12.jpg",
   "model1": {
     "name": "iPhone 15",
-    "link": "https://example.com/iphone15"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/tp05_06/"
   },
   "model2": {
     "name": "iPhone 15 Pro",
-    "link": "https://example.com/iphone15pro"
-  },
-  "model3": {
-    "name": "iPhone 15 Plus",
-    "link": "https://example.com/iphone15plus"
-  },
-  "model4": {
-    "name": "iPhone 15 Pro Max",
-    "link": "https://example.com/iphone15promax"
+    "link": "https://www.pg-a.co.jp/product-all/pg-23b/tp05_06/"
   }
 },{
-  "name": "ガラスケース14",
-  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
-  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "name": "アルミニウムバンパーケース",
+  "text": "iPhone本体の美しさを活かすシンプルデザインなバンパーです。<br><br>各種コネクターやボタン周りまでバンパーがしっかり覆う為、安心して使用頂けます。",
+  "src": "./img/item_img13.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pg-23abp/"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://www.pg-a.co.jp/product-all/pg-23a/pg-23abp/"
+  }
+},{
+  "name": "次回はここから",
+  "text": "次回はここから",
+  "src": "./img/item_img13.jpg",
   "model1": {
     "name": "iPhone 15",
     "link": "https://example.com/iphone15"
@@ -312,6 +284,106 @@
   }
 },{
   "name": "ガラスケース18",
+  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://example.com/iphone15"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://example.com/iphone15pro"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://example.com/iphone15plus"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://example.com/iphone15promax"
+  }
+},{
+  "name": "ディズニーアイテム",
+  "text": "",
+  "src": "./img/chara_img01.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://www.pg-a.co.jp/?product_model=iphone15&product_char=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC&product_cat=&product_type=2023new&jan=&no=&s=&search_contents=product"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://www.pg-a.co.jp/?product_model=iphone15pro&product_char=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC&product_cat=&product_type=2023new&jan=&no=&s=&search_contents=product"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://www.pg-a.co.jp/?product_model=iphone15plus&product_char=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC&product_cat=&product_type=2023new&jan=&no=&s=&search_contents=product"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://www.pg-a.co.jp/?product_model=iphone15promax&product_char=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC&product_cat=&product_type=2023new&jan=&no=&s=&search_contents=product"
+  }
+},{
+  "name": "ガラスケース20",
+  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://example.com/iphone15"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://example.com/iphone15pro"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://example.com/iphone15plus"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://example.com/iphone15promax"
+  }
+},{
+  "name": "ガラスケース21",
+  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://example.com/iphone15"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://example.com/iphone15pro"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://example.com/iphone15plus"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://example.com/iphone15promax"
+  }
+},{
+  "name": "ガラスケース22",
+  "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
+  "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
+  "model1": {
+    "name": "iPhone 15",
+    "link": "https://example.com/iphone15"
+  },
+  "model2": {
+    "name": "iPhone 15 Pro",
+    "link": "https://example.com/iphone15pro"
+  },
+  "model3": {
+    "name": "iPhone 15 Plus",
+    "link": "https://example.com/iphone15plus"
+  },
+  "model4": {
+    "name": "iPhone 15 Pro Max",
+    "link": "https://example.com/iphone15promax"
+  }
+},{
+  "name": "ガラスケース23",
   "text": "オリジナリティと機能性を追求したiPhone 14・13用ガラスフリップケースです。MIL規格（MIL-STD-810G)の2項目、落下・振動に準拠した試験をクリアしたタフ設計。ケースの内面にはマグネットロック機能搭載でラクラクカバーを開閉することが可能。背面はクリアガラス仕様なのでシールや写真を入れて自分好みにカスタマイズすることが出来ます。",
   "src": "https://image.rakuten.co.jp/pga-shop/cabinet/pg-21/pg-21kgf01-06_6re.jpg",
   "model1": {

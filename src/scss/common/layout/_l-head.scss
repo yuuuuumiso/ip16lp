@@ -62,10 +62,14 @@
         }
     }
     &.is-active{
+        @include mq(sp) {
+            background-color: #fff;
+        }
         span {
             top: 50%;
             @include mq(sp) {
                 top: 50%;
+                background-color: #222;
             }
         }
     }
@@ -97,9 +101,9 @@
     left: 0;
     width: calc(100% - 50px);
     height: 100%;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: .3s;
     background: #070707;
+    cursor: pointer;
     @include mq(sp) {
         width: 100%;
     }
@@ -116,9 +120,9 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    width: 25svw;
+    width: 30svw;
     transform: translateX(100%);
-    transition: .5s ease-in-out .3s;
+    transition: .2s ease-in-out .1s;
     background: #222;
     @include mq(sp) {
         width: 80svw;
@@ -132,4 +136,61 @@
 }
 .l-nav-global__list a{
 color: #fff;
+display: block;
+margin-bottom: 1rem;
+font-size: clamp(1.25rem, -0.528rem + 3.7vw, 2.25rem);
+font-family: "Oswald", "Noto Sans JP";
+opacity: 0;
+transform: translate3d(0, 100%, 0) skewY(5deg);
+@include mq(sp) {
+font-size: 1.5rem;    
+}
+}
+.l-nav-global.is-active li a{
+    opacity: 1;
+    transform: translate3d(0, 0, 0) skewY(0);
+transition: .4s ease .3s;
+}
+.l-nav-global.is-active li:nth-child(2) a{
+transition-delay: 0.4s;
+}
+.l-nav-global.is-active li:nth-child(3) a{
+transition-delay: 0.5s;
+}
+.l-nav-global.is-active li:nth-child(4) a{
+transition-delay: 0.6s;
+}
+.l-nav-global.is-active li:nth-child(5) a{
+transition-delay: 0.7s;
+}
+.l-nav-global.is-active li:nth-child(6) a{
+transition-delay: 0.8s;
+}
+.l-nav-global{
+    &__inner{
+        padding: 50px 40px;
+        @include mq(sp) {
+            padding: 80px 25px 30px;
+            height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;      
+        }
+    }
+}
+
+.l-nav-lists li i{
+    color: #ffffff;
+    @include mq(sp) {
+        font-size: 30px;
+    }
+}
+.l-nav-lists.l-nav-lists--spSns{
+    display: none;
+    @include mq(sp) {
+        display: flex;
+        li{
+            margin-right: 0.8rem;
+        }
+    }
 }
